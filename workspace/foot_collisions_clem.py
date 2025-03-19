@@ -6,7 +6,7 @@ import placo
 from placo_utils.tf import tf
 
 # Whether to debug (Meshcat viewer)
-debug = True
+debug = False
 # How many rotations of the foot are used
 n_directions = 256
 
@@ -66,57 +66,54 @@ def find_highest_distance(direction, max_distance=0.2, max_angle=np.deg2rad(45))
     robot.reset()
     robot.update_kinematics()
 
-    for alpha in np.linspace(-max_angle, max_angle, 100):
-        for x in np.linspace(-max_distance, max_distance, 100):
-            for y in np.linspace(-max_distance, max_distance, 100):
-            
-                T_world_target = T_world_left
+    for distance in np.linspace(0, max_distance, 100):
+        T_world_target = T_world_left
 
-                # Position of the target
-                T_world_target[0, 3] = direction[0] * x
-                T_world_target[1, 3] = direction[1] * y
+        # Position of the target
+        T_world_target[0, 3] = direction[0] * distance
+        T_world_target[1, 3] = direction[1] * distance
 
-                # Orientation of the target
-                T_world_target[:3, :3] = tf.rotation_matrix(direction[2]*alpha, [0, 0, 1])[:3, :3]
+        # Orientation of the target
+        T_world_target[:3, :3] = tf.rotation_matrix(direction[2]*max_angle, [0, 0, 1])[:3, :3]
 
-                left_foot_task.T_world_frame = T_world_target
+        left_foot_task.T_world_frame = T_world_target
 
-                for _ in range(32):
-                    solver.solve(True)
-                    robot.update_kinematics()
+        for _ in range(32):
+            solver.solve(True)
+            robot.update_kinematics()
 
-                if debug:
-                    robot_frame_viz(robot, "left_foot")
-                    viz.display(robot.state.q)
+        if debug:
+            robot_frame_viz(robot, "left_foot")
+            viz.display(robot.state.q)
 
-                collisions = robot.self_collisions(False)
-                points_viz(
-                    "collisions",
-                    [c.get_contact(0) for c in collisions],
-                    radius=0.003,
-                    color=0xFF0000,
+        collisions = robot.self_collisions(False)
+        points_viz(
+            "collisions",
+            [c.get_contact(0) for c in collisions],
+            radius=0.003,
+            color=0xFF0000,
+        )
+        frame_viz("target", T_world_target, opacity=0.25)
+
+        position_error = np.linalg.norm(left_foot_task.T_world_frame[:3, 3] - robot.get_T_world_frame("left_foot")[:3, 3])
+        orientation_error = np.linalg.norm(left_foot_task.T_world_frame[:3, :3] - robot.get_T_world_frame("left_foot")[:3, :3])
+
+        if position_error > 2e-3 or orientation_error > 2e-2:
+            if debug:
+                input(
+                    f"Target unreachable for direction {direction}, press [ENTER] to continue"
                 )
-                frame_viz("target", T_world_target, opacity=0.25)
+            return distance
 
-                position_error = np.linalg.norm(left_foot_task.T_world_frame[:3, 3] - robot.get_T_world_frame("left_foot")[:3, 3])
-                orientation_error = np.linalg.norm(left_foot_task.T_world_frame[:3, :3] - robot.get_T_world_frame("left_foot")[:3, :3])
+        if collisions:
+            if debug:
+                input(
+                    f"Collision detected for direction {direction}, press [ENTER] to continue"
+                )
+            return distance
 
-                if position_error > 2e-3 or orientation_error > 2e-2:
-                    if debug:
-                        input(
-                            f"Target unreachable for direction {direction}, press [ENTER] to continue"
-                        )
-                    return distance
-
-                if collisions:
-                    if debug:
-                        input(
-                            f"Collision detected for direction {direction}, press [ENTER] to continue"
-                        )
-                    return distance
-
-                if debug:
-                    time.sleep(0.01)
+        if debug:
+            time.sleep(0.01)
 
     return max_distance
 
@@ -137,53 +134,3 @@ polytope.show(show_points=True)
 polytope.simplify()
 polytope.show(show_points=True)
 polytope.save("workspace.pkl")
-
-
-
-# @schedule(interval=dt)
-# def loop():
-#     global t
-#     t += dt
-#     T_world_target = T_world_left
-
-#     T_world_target[0, 3] = np.sin(t) * 0.1
-#     T_world_target[1, 3] = np.cos(t) * 0.1
-
-#     orientation_target = tf.rotation_matrix(np.sin(2*t)*1.2, [0, 0, 1])[:3, :3]
-#     T_world_target[:3,:3] = orientation_target
-
-#     # Moving the robot leg
-
-#     left_foot_task.T_world_frame = T_world_target
-
-#     robot.update_kinematics()
-#     solver.solve(True)
-
-#     # Getting the collisions
-#     collisions = robot.self_collisions(False)
-
-#     # Printing the collisions
-#     print(f"Found {len(collisions)} collisions")
-#     for collision in collisions:
-#         print("- Collision betweek " + collision.bodyA + " and " + collision.bodyB)
-
-#     # Displaying the collisions
-#     points_viz(
-#         "collisions",
-#         np.array([collision.get_contact(0) for collision in collisions]),
-#         color=0xFF0000,
-#     )
-
-#     robot_frame_viz(robot, "left_foot")
-#     frame_viz("target", T_world_target, opacity=0.25)
-
-#     position_error = left_foot_task.T_world_frame[:3, 3] - robot.get_T_world_frame("left_foot")[:3, 3]
-#     orientation_error = left_foot_task.T_world_frame[:3, :3] - robot.get_T_world_frame("left_foot")[:3, :3]
-#     print(f"Position error: {np.linalg.norm(position_error)}")
-#     print(f"Orientation error: {np.linalg.norm(orientation_error)}")
-
-#     # Displaying the robot
-#     viz.display(robot.state.q)
-
-
-# run_loop()

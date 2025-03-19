@@ -8,7 +8,7 @@ from placo_utils.tf import tf
 # Whether to debug (Meshcat viewer)
 debug = False
 # How many rotations of the foot are used
-n_directions = 256
+n_directions = 1024
 
 # Loading the robot
 robot = placo.RobotWrapper("../models/sigmaban/")
@@ -62,7 +62,7 @@ dt = 0.01
 solver.dt = dt
 robot.update_kinematics()
 
-def find_highest_distance(direction, max_distance=0.2, max_angle=np.deg2rad(45)):
+def find_highest_distance(direction, max_distance=1, max_angle=np.deg2rad(45)):
     robot.reset()
     robot.update_kinematics()
 
@@ -74,7 +74,7 @@ def find_highest_distance(direction, max_distance=0.2, max_angle=np.deg2rad(45))
         T_world_target[1, 3] = direction[1] * distance
 
         # Orientation of the target
-        T_world_target[:3, :3] = tf.rotation_matrix(direction[2]*max_angle, [0, 0, 1])[:3, :3]
+        T_world_target[:3, :3] = tf.rotation_matrix(direction[2]*distance, [0, 0, 1])[:3, :3]
 
         left_foot_task.T_world_frame = T_world_target
 
@@ -130,6 +130,8 @@ for direction in tqdm.tqdm(directions):
 from polytope import Polytope
 
 polytope = Polytope(A, b)
+polytope.save("workspace.pkl")
+
 polytope.show(show_points=True)
 polytope.simplify()
 polytope.show(show_points=True)

@@ -21,8 +21,8 @@ class PointCloud:
 
     def optimize_normals(self) -> bool:
         for k in tqdm.tqdm(range(len(self.points))):
-            if len(self.points) > 256:
-                sample_points = np.array(random.choices(self.points, k=256))
+            if len(self.points) > 1024:
+                sample_points = np.array(random.choices(self.points, k=1024))
             else:
                 sample_points = self.points
             point = self.points[k]
@@ -50,4 +50,4 @@ polytope = points_cloud.build_polytope()
 print(f"Simplifying polytope")
 polytope.simplify()
 polytope.show(show_points=True)
-polytope.save("workspace.pkl")
+polytope.save("workspace_new.pkl")

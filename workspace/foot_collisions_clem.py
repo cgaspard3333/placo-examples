@@ -10,13 +10,17 @@ debug = False
 # How many rotations of the foot are used
 n_directions = 1024
 
+foot_y_offset = 0.08
+
 # Loading the robot
 robot = placo.RobotWrapper("../models/sigmaban/")
 viz = robot_viz(robot)
 
 # Placing the left foot in world origin
-robot.set_joint("left_knee", 0.1)
-robot.set_joint("right_knee", 0.1)
+robot.set_joint("left_knee", 0.2)
+robot.set_joint("right_knee", 0.2)
+robot.set_joint_limits("right_knee", 0.2, np.pi/2)
+robot.set_joint_limits("left_knee", 0.2, np.pi/2)
 robot.update_kinematics()
 robot.set_T_world_frame("left_foot", np.eye(4))
 robot.update_kinematics()
@@ -31,16 +35,17 @@ viz = robot_viz(robot)
 # Trunk
 T_world_trunk = robot.get_T_world_frame("trunk")
 T_world_trunk[2, 3] = 0.35
-trunk_task = solver.add_frame_task("trunk", T_world_trunk)
-trunk_task.configure("trunk_task", "soft", 1e3, 1e3)
+trunk_task = solver.add_frame_task("trunk", T_world_trunk @ tf.rotation_matrix(0.2, [0, 1, 0]))
+trunk_task.configure("trunk_task", "soft", 1e6, 1e6)
 
 # Fix right foot on the floor
 right_foot_task = solver.add_frame_task("right_foot", T_world_right)
-right_foot_task.configure("right_foot", "soft", 1e3, 1e3)
+right_foot_task.configure("right_foot", "soft", 1e6, 1e6)
 
 #Add frame task for left foot
 T_world_left = np.eye(4)
 # T_world_left[1, 3] = 0.16
+T_world_left[1, 3] += foot_y_offset
 left_foot_task = solver.add_frame_task("left_foot", T_world_left)
 left_foot_task.configure("left_foot", "soft", 1.0, 1.0)
 
@@ -49,21 +54,27 @@ posture_regularization_task = solver.add_joints_task()
 posture_regularization_task.set_joints({dof: 0.0 for dof in robot.joint_names()})
 posture_regularization_task.configure("reg", "soft", 1e-5)
 
+solver.enable_joint_limits(True)
+
 # Initializing robot position before enabling constraints
 for _ in range(32):
     solver.solve(True)
     robot.update_kinematics()
 
-solver.enable_joint_limits(True)
+q_save = robot.state.q.copy()
 solver.enable_velocity_limits(True)
-
 t = 0
 dt = 0.01
 solver.dt = dt
 robot.update_kinematics()
 
+# if debug:
+#     robot_frame_viz(robot, "left_foot")
+#     viz.display(robot.state.q)
+#     input("...")
+
 def find_highest_distance(direction, max_distance=1, max_angle=np.deg2rad(45)):
-    robot.reset()
+    robot.state.q = q_save.copy()
     robot.update_kinematics()
 
     for distance in np.linspace(0, max_distance, 100):
@@ -71,14 +82,14 @@ def find_highest_distance(direction, max_distance=1, max_angle=np.deg2rad(45)):
 
         # Position of the target
         T_world_target[0, 3] = direction[0] * distance
-        T_world_target[1, 3] = direction[1] * distance
+        T_world_target[1, 3] = foot_y_offset + direction[1] * distance
 
         # Orientation of the target
         T_world_target[:3, :3] = tf.rotation_matrix(direction[2]*distance, [0, 0, 1])[:3, :3]
 
         left_foot_task.T_world_frame = T_world_target
 
-        for _ in range(32):
+        for _ in range(4):
             solver.solve(True)
             robot.update_kinematics()
 
@@ -98,7 +109,7 @@ def find_highest_distance(direction, max_distance=1, max_angle=np.deg2rad(45)):
         position_error = np.linalg.norm(left_foot_task.T_world_frame[:3, 3] - robot.get_T_world_frame("left_foot")[:3, 3])
         orientation_error = np.linalg.norm(left_foot_task.T_world_frame[:3, :3] - robot.get_T_world_frame("left_foot")[:3, :3])
 
-        if position_error > 2e-3 or orientation_error > 2e-2:
+        if position_error > 5e-4 or orientation_error > 2e-5:
             if debug:
                 input(
                     f"Target unreachable for direction {direction}, press [ENTER] to continue"
@@ -132,7 +143,19 @@ from polytope import Polytope
 polytope = Polytope(A, b)
 polytope.save("workspace.pkl")
 
-polytope.show(show_points=True)
+# polytope.show(show_points=True)
 polytope.simplify()
 polytope.show(show_points=True)
-polytope.save("workspace.pkl")
+polytope.save("workspace_old.pkl")
+
+# points = []
+# directions = placo.directions_3d(n_directions)
+
+# print(f"Sampling workspace, using {n_directions} directions")
+# for direction in tqdm.tqdm(directions):
+#     dist = find_highest_distance(direction)
+#     points.append(direction * dist)
+
+# import pickle
+
+# pickle.dump(points, open("points.pkl", "wb"))

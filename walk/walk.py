@@ -129,7 +129,6 @@ elif args.mujoco:
     sim_mjc.dt = DT
     sim_mjc.step()
     sim_mjc.set_T_world_site("left_foot", np.eye(4))
-    sim_mjc.reset_velocity()
 
     sim_mjc.step()
     start = time.time()
@@ -142,7 +141,7 @@ else:
 
 # Timestamps
 start_t = time.time()
-initial_delay = -3.0 if args.pybullet or args.meshcat or args.mujoco else 0.0
+initial_delay = -2.0 if args.pybullet or args.meshcat or args.mujoco else 0.0
 t = initial_delay
 last_display = time.time()
 last_replan = 0
@@ -214,8 +213,6 @@ while True:
         indices = [index_map[dof]-1 for dof in robot.joint_names()]
 
         sim_mjc.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
-
-        sim_mjc.set_T_world_fbase = robot.state.q[:-7]
 
         sim_mjc.step()
 

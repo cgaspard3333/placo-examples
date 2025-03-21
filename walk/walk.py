@@ -9,14 +9,14 @@ from placo_utils.visualization import (
     line_viz,
     footsteps_viz,
 )
+from simulator import Simulator, tf
 
 warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description="Process some integers.")
 parser.add_argument("-p", "--pybullet", action="store_true", help="PyBullet simulation")
-parser.add_argument(
-    "-m", "--meshcat", action="store_true", help="MeshCat visualization"
-)
+parser.add_argument("-mc", "--meshcat", action="store_true", help="MeshCat visualization")
+parser.add_argument("-mjc", "--mujoco", action="store_true", help="MuJoCo visualization")
 args = parser.parse_args()
 
 DT = 0.005
@@ -30,13 +30,9 @@ parameters = placo.HumanoidParameters()
 
 # Timing parameters
 parameters.single_support_duration = 0.38  # Duration of single support phase [s]
-parameters.single_support_timesteps = (
-    10  # Number of planning timesteps per single support phase
-)
+parameters.single_support_timesteps = 10  # Number of planning timesteps per single support phase
 parameters.double_support_ratio = 0.0  # Ratio of double support (0.0 to 1.0)
-parameters.startend_double_support_ratio = (
-    1.5  # Ratio duration of supports for starting and stopping walk
-)
+parameters.startend_double_support_ratio = 1.5  # Ratio duration of supports for starting and stopping walk
 parameters.planned_timesteps = 48  # Number of timesteps planned ahead
 parameters.replan_timesteps = 10  # Replanning each n timesteps
 
@@ -44,9 +40,7 @@ parameters.replan_timesteps = 10  # Replanning each n timesteps
 parameters.walk_com_height = 0.32  # Constant height for the CoM [m]
 parameters.walk_foot_height = 0.04  # Height of foot rising while walking [m]
 parameters.walk_trunk_pitch = 0.15  # Trunk pitch angle [rad]
-parameters.walk_foot_rise_ratio = (
-    0.2  # Time ratio for the foot swing plateau (0.0 to 1.0)
-)
+parameters.walk_foot_rise_ratio = 0.2  # Time ratio for the foot swing plateau (0.0 to 1.0)
 
 # Feet parameters
 parameters.foot_length = 0.1576  # Foot length [m]
@@ -130,13 +124,25 @@ elif args.meshcat:
     # Starting Meshcat viewer
     viz = robot_viz(robot)
     footsteps_viz(trajectory.get_supports())
+elif args.mujoco:
+    sim_mjc = Simulator()
+    sim_mjc.dt = DT
+    sim_mjc.step()
+    sim_mjc.set_T_world_site("left_foot", np.eye(4))
+    sim_mjc.reset_velocity()
+
+    sim_mjc.step()
+    start = time.time()
+
+    # dofs_list_mjc = [dof[1] for dof in sim_mjc.dofs]
+    dofs_list_mjc = sim_mjc.dof_names()
 else:
-    print("No visualization selected, use either -p or -m")
+    print("No visualization selected, use either -p,-mx or -mjc")
     exit()
 
 # Timestamps
 start_t = time.time()
-initial_delay = -2.0 if args.pybullet or args.meshcat else 0.0
+initial_delay = -3.0 if args.pybullet or args.meshcat or args.mujoco else 0.0
 t = initial_delay
 last_display = time.time()
 last_replan = 0
@@ -155,7 +161,7 @@ while True:
         robot.ensure_on_floor()
 
     # If enough time elapsed and we can replan, do the replanning
-    if (t - last_replan > parameters.replan_timesteps * parameters.dt() and walk.can_replan_supports(trajectory, t)):
+    if t - last_replan > parameters.replan_timesteps * parameters.dt() and walk.can_replan_supports(trajectory, t):
         # Replanning footsteps from current trajectory
         supports = walk.replan_supports(repetitive_footsteps_planner, trajectory, t, last_replan)
 
@@ -169,8 +175,7 @@ while True:
             footsteps_viz(supports)
 
             # Drawing planned CoM trajectory on the ground
-            coms = [[*trajectory.get_p_world_CoM(t)[:2], 0.0]
-                for t in np.linspace(trajectory.t_start, trajectory.t_end, 100)]
+            coms = [[*trajectory.get_p_world_CoM(t)[:2], 0.0] for t in np.linspace(trajectory.t_start, trajectory.t_end, 100)]
             line_viz("CoM_trajectory", np.array(coms), 0xFFAA00)
 
     # During the warmup phase, the robot is enforced to stay in the initial position
@@ -199,6 +204,24 @@ while True:
             T_world_trunk[:3, :3] = trajectory.get_R_world_trunk(t)
             T_world_trunk[:3, 3] = trajectory.get_p_world_CoM(t)
             frame_viz("trunk_target", T_world_trunk)
+    
+    # Updating MuJoCo simulation
+    elif args.mujoco:
+        sim_mjc.render(realtime=True)
+
+        index_map = {element: index for index, element in enumerate([dof for dof in dofs_list_mjc])}
+
+        indices = [index_map[dof]-1 for dof in robot.joint_names()]
+
+        sim_mjc.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
+
+        sim_mjc.set_T_world_fbase = robot.state.q[:-7]
+
+        sim_mjc.step()
+
+        elapsed = time.time() - start
+        frames = sim_mjc.frame
+        # print(f"Elapsed: {elapsed:.2f}, Frames: {frames}, FPS: {frames / elapsed:.2f}")
 
     # Spin-lock until the next tick
     t += DT

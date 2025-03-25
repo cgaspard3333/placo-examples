@@ -20,7 +20,7 @@ parser.add_argument("-mjc", "--mujoco", action="store_true", help="MuJoCo visual
 args = parser.parse_args()
 
 DT = 0.005
-TRUNK_MODE = True
+TRUNK_MODE = False
 model_filename = "../models/sigmaban/robot.urdf"
 
 # Loading the robot
@@ -132,21 +132,20 @@ elif args.meshcat:
     viz = robot_viz(robot)
     footsteps_viz(trajectory.get_supports())
 elif args.mujoco:
-    sim_mjc = Simulator()
-    sim_mjc.step()
-    sim_mjc.set_T_world_site("left_foot", np.eye(4))
+    sim = Simulator()
+    sim.step()
+    sim.set_T_world_site("left_foot", np.eye(4))
 
     for dof in robot.joint_names():
-        sim_mjc.set_control(dof, robot.get_joint(dof), reset=True)
+        sim.set_control(dof, robot.get_joint(dof), reset=True)
 
     for i in range(1000):
-        sim_mjc.step()
+        sim.step()
 
-    sim_mjc.t = 0
+    sim.t = 0
 
-    dofs_list_mjc = sim_mjc.dof_names()
-    index_map = {element: index for index, element in enumerate([dof for dof in dofs_list_mjc])}
-    indices = [index_map[dof]-1 for dof in robot.joint_names()]
+    index_map = {element: index for index, element in enumerate([dof for dof in sim.dof_names()])}
+    indices = [index_map[dof] for dof in robot.joint_names()]
 else:
     print("No visualization selected, use either -p,-mx or -mjc")
     exit()
@@ -218,24 +217,24 @@ while True:
     
     # Updating MuJoCo simulation
     elif args.mujoco:
-        sim_mjc.render(True)
+        sim.render(True)
 
-        sim_mjc.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
+        sim.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
 
         # for dof in robot.joint_names():
-        #     sim_mjc.set_control(dof, robot.get_joint(dof))
+        #     sim.set_control(dof, robot.get_joint(dof))
 
-        sim_mjc.step()
+        sim.step()
 
         # elapsed = time.time() - start_t
-        # frames = sim_mjc.frame
+        # frames = sim.frame
         # print(f"Elapsed: {elapsed:.2f}, Frames: {frames}, FPS: {frames / elapsed:.2f}")
 
     # Spin-lock until the next tick
     if args.meshcat or args.pybullet:
         t += DT
     elif args.mujoco:
-        t = sim_mjc.t
+        t = sim.t
 
     while time.time() + initial_delay < start_t + t:
         time.sleep(1e-3)

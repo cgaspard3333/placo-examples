@@ -20,6 +20,7 @@ parser.add_argument("-mjc", "--mujoco", action="store_true", help="MuJoCo visual
 args = parser.parse_args()
 
 DT = 0.005
+TRUNK_MODE = True
 model_filename = "../models/sigmaban/robot.urdf"
 
 # Loading the robot
@@ -29,24 +30,27 @@ robot = placo.HumanoidRobot(model_filename)
 parameters = placo.HumanoidParameters()
 
 # Timing parameters
-parameters.single_support_duration = 0.38  # Duration of single support phase [s]
-parameters.single_support_timesteps = 10  # Number of planning timesteps per single support phase
+parameters.single_support_duration = 0.36  # Duration of single support phase [s]
+parameters.single_support_timesteps = 12  # Number of planning timesteps per single support phase
 parameters.double_support_ratio = 0.0  # Ratio of double support (0.0 to 1.0)
 parameters.startend_double_support_ratio = 1.5  # Ratio duration of supports for starting and stopping walk
-parameters.planned_timesteps = 48  # Number of timesteps planned ahead
-parameters.replan_timesteps = 10  # Replanning each n timesteps
+parameters.planned_timesteps = 54  # Number of timesteps planned ahead
+parameters.replan_timesteps = 3  # Replanning each n timesteps
 
 # Posture parameters
-parameters.walk_com_height = 0.32  # Constant height for the CoM [m]
+if TRUNK_MODE:
+    parameters.walk_com_height = 0.34  # Constant height for the CoM [m]
+else:
+    parameters.walk_com_height = 0.32  # Constant height for the CoM [m]
 parameters.walk_foot_height = 0.04  # Height of foot rising while walking [m]
-parameters.walk_trunk_pitch = 0.15  # Trunk pitch angle [rad]
+parameters.walk_trunk_pitch = 0.2  # Trunk pitch angle [rad]
 parameters.walk_foot_rise_ratio = 0.2  # Time ratio for the foot swing plateau (0.0 to 1.0)
 
 # Feet parameters
 parameters.foot_length = 0.1576  # Foot length [m]
 parameters.foot_width = 0.092  # Foot width [m]
 parameters.feet_spacing = 0.122  # Lateral feet spacing [m]
-parameters.zmp_margin = 0.02  # ZMP margin [m]
+parameters.zmp_margin = 0.0  # ZMP margin [m]
 parameters.foot_zmp_target_x = 0.0  # Reference target ZMP position in the foot [m]
 parameters.foot_zmp_target_y = 0.0  # Reference target ZMP position in the foot [m]
 
@@ -63,6 +67,9 @@ solver.dt = DT
 
 # Creating the walk QP tasks
 tasks = placo.WalkTasks()
+tasks.trunk_mode = TRUNK_MODE
+if TRUNK_MODE:
+    tasks.com_x = 0.05
 tasks.initialize_tasks(solver, robot)
 
 # Creating a joint task to assign DoF values for upper body
@@ -97,9 +104,9 @@ print("Initial position reached")
 
 # Creating the FootstepsPlanner
 repetitive_footsteps_planner = placo.FootstepsPlannerRepetitive(parameters)
-d_x = 0.1
+d_x = 0.08
 d_y = 0.0
-d_theta = 0.2
+d_theta = 0.0
 nb_steps = 10
 repetitive_footsteps_planner.configure(d_x, d_y, d_theta, nb_steps)
 
@@ -126,22 +133,27 @@ elif args.meshcat:
     footsteps_viz(trajectory.get_supports())
 elif args.mujoco:
     sim_mjc = Simulator()
-    sim_mjc.dt = DT
     sim_mjc.step()
     sim_mjc.set_T_world_site("left_foot", np.eye(4))
 
-    sim_mjc.step()
-    start = time.time()
+    for dof in robot.joint_names():
+        sim_mjc.set_control(dof, robot.get_joint(dof), reset=True)
 
-    # dofs_list_mjc = [dof[1] for dof in sim_mjc.dofs]
+    for i in range(1000):
+        sim_mjc.step()
+
+    sim_mjc.t = 0
+
     dofs_list_mjc = sim_mjc.dof_names()
+    index_map = {element: index for index, element in enumerate([dof for dof in dofs_list_mjc])}
+    indices = [index_map[dof]-1 for dof in robot.joint_names()]
 else:
     print("No visualization selected, use either -p,-mx or -mjc")
     exit()
 
 # Timestamps
 start_t = time.time()
-initial_delay = -2.0 if args.pybullet or args.meshcat or args.mujoco else 0.0
+initial_delay = -2.0 if args.pybullet or args.meshcat else 0.0
 t = initial_delay
 last_display = time.time()
 last_replan = 0
@@ -206,21 +218,24 @@ while True:
     
     # Updating MuJoCo simulation
     elif args.mujoco:
-        sim_mjc.render(realtime=True)
-
-        index_map = {element: index for index, element in enumerate([dof for dof in dofs_list_mjc])}
-
-        indices = [index_map[dof]-1 for dof in robot.joint_names()]
+        sim_mjc.render(True)
 
         sim_mjc.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
 
+        # for dof in robot.joint_names():
+        #     sim_mjc.set_control(dof, robot.get_joint(dof))
+
         sim_mjc.step()
 
-        elapsed = time.time() - start
-        frames = sim_mjc.frame
+        # elapsed = time.time() - start_t
+        # frames = sim_mjc.frame
         # print(f"Elapsed: {elapsed:.2f}, Frames: {frames}, FPS: {frames / elapsed:.2f}")
 
     # Spin-lock until the next tick
-    t += DT
+    if args.meshcat or args.pybullet:
+        t += DT
+    elif args.mujoco:
+        t = sim_mjc.t
+
     while time.time() + initial_delay < start_t + t:
         time.sleep(1e-3)

@@ -17,11 +17,14 @@ parser = argparse.ArgumentParser(description="Process some integers.")
 parser.add_argument("-p", "--pybullet", action="store_true", help="PyBullet simulation")
 parser.add_argument("-mc", "--meshcat", action="store_true", help="MeshCat visualization")
 parser.add_argument("-mjc", "--mujoco", action="store_true", help="MuJoCo visualization")
+parser.add_argument("-use-bam", "--use-bam", action="store_true", help="Use BAM")
 args = parser.parse_args()
 
 DT = 0.005
-TRUNK_MODE = False
-model_filename = "../models/sigmaban/robot.urdf"
+TRUNK_MODE = True
+model_filename = "../models/sigmaban_2025/urdf/robot.urdf"
+# model_filename = "../models/sigmaban_2024/robot.urdf"
+config_bam_filename = "../models/sigmaban_2025/bam_config.json"
 
 # Loading the robot
 robot = placo.HumanoidRobot(model_filename)
@@ -44,15 +47,15 @@ else:
     parameters.walk_com_height = 0.32  # Constant height for the CoM [m]
 parameters.walk_foot_height = 0.04  # Height of foot rising while walking [m]
 parameters.walk_trunk_pitch = 0.2  # Trunk pitch angle [rad]
-parameters.walk_foot_rise_ratio = 0.2  # Time ratio for the foot swing plateau (0.0 to 1.0)
+parameters.walk_foot_rise_ratio = 0.3  # Time ratio for the foot swing plateau (0.0 to 1.0)
 
 # Feet parameters
 parameters.foot_length = 0.1576  # Foot length [m]
 parameters.foot_width = 0.092  # Foot width [m]
-parameters.feet_spacing = 0.122  # Lateral feet spacing [m]
+parameters.feet_spacing = 0.16  # Lateral feet spacing [m]
 parameters.zmp_margin = 0.0  # ZMP margin [m]
 parameters.foot_zmp_target_x = 0.0  # Reference target ZMP position in the foot [m]
-parameters.foot_zmp_target_y = 0.0  # Reference target ZMP position in the foot [m]
+parameters.foot_zmp_target_y = 0.02  # Reference target ZMP position in the foot [m]
 
 # Limit parameters
 parameters.walk_max_dtheta = 1  # Maximum dtheta per step [rad]
@@ -132,7 +135,10 @@ elif args.meshcat:
     viz = robot_viz(robot)
     footsteps_viz(trajectory.get_supports())
 elif args.mujoco:
-    sim = Simulator()
+    if args.use_bam:
+        sim = Simulator(use_bam=True, config=config_bam_filename)
+    else:
+        sim = Simulator()
     sim.step()
     sim.set_T_world_site("left_foot", np.eye(4))
 
@@ -219,10 +225,10 @@ while True:
     elif args.mujoco:
         sim.render(True)
 
-        sim.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
+        # sim.data.ctrl = robot.state.q[-20:][np.argsort(indices)]
 
-        # for dof in robot.joint_names():
-        #     sim.set_control(dof, robot.get_joint(dof))
+        for dof in robot.joint_names():
+            sim.set_control(dof, robot.get_joint(dof))
 
         sim.step()
 
@@ -236,5 +242,5 @@ while True:
     elif args.mujoco:
         t = sim.t
 
-    while time.time() + initial_delay < start_t + t:
-        time.sleep(1e-3)
+    # while time.time() + initial_delay < start_t + t:
+    #     continue

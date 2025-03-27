@@ -6,13 +6,20 @@ import meshcat.transformations as tf
 import mujoco
 import mujoco.viewer
 import numpy as np
-
+from bam.mujoco import load_config, MujocoController
+from bam.model import load_model
 
 class Simulator:
-    def __init__(self, model_dir: Optional[str] = None):
+    def __init__(self, model_dir: Optional[str] = None, 
+                 use_bam: Optional[bool] = False, 
+                 config: Optional[str] = None,
+                 kp: Optional[float] = 32.0):
         # If model_dir is not provided, use the current directory
         if model_dir is None:
-            model_dir = "../models/sigmaban"
+            if use_bam:
+                model_dir = "../models/sigmaban_2025/mujoco_bam"
+            else:
+                model_dir = "../models/sigmaban_2025/mujoco"
         self.model_dir = model_dir
 
         # Load the model and data
@@ -30,6 +37,29 @@ class Simulator:
         self.frame: int = 0
         self.data.ctrl[:] = 0
 
+        # BAM parameters
+        self.use_bam: bool = use_bam
+        self.dofs_to_model: dict = {}
+        self.dofs_to_ctrl_index: dict = {}
+        self.controllers: dict = {}
+
+        # Loading BAM configuration
+        if use_bam and config is not None:
+            controllers, dofs_to_model, dofs_to_ctrl_id = load_config(config, kp, self.model, self.data)
+            self.controllers = controllers
+            self.dofs_to_model = dofs_to_model
+            self.dofs_to_ctrl_index = dofs_to_ctrl_id
+
+    def add_actuator_model(self, name: str, model_path: str, dofs: list, kp: float = 32) -> None:
+        for i, dof in enumerate(dofs):
+            self.dofs_to_model[dof] = name
+            self.dofs_to_ctrl_index[dof] = i
+
+        act_model = load_model(model_path)
+        act_model.actuator.kp = kp
+        self.controllers[name] = {"controller": MujocoController(act_model, dofs, self.model, self.data), 
+                                  "dofs_state": [self.get_q(dof) for dof in dofs]}
+        
     def set_floor_friction(self, friction: float) -> None:
         self.model.geom("floor").friction[0] = friction
         self.model.geom("floor").priority = 1
@@ -122,8 +152,12 @@ class Simulator:
             name (str): actuator name
             value (float): target value
         """
-        actuator_idx = self.get_actuator_index(name)
-        self.data.ctrl[actuator_idx] = value
+        if self.use_bam:
+            self.controllers[self.dofs_to_model[name]]["dofs_state"][self.dofs_to_ctrl_index[name]] = value
+
+        else:
+            actuator_idx = self.get_actuator_index(name)
+            self.data.ctrl[actuator_idx] = value
 
         if reset:
             self.set_q(name, value)
@@ -167,7 +201,7 @@ class Simulator:
         """
         Gets the transformation from world to floating base frame.
         """
-        data = self.data.joint("root").qpos
+        data = self.data.joint("torso_2023_freejoint").qpos
         quat = data[3:]
         pos = data[:3]
 
@@ -182,7 +216,7 @@ class Simulator:
         Args:
             T (np.ndarray): target transformation
         """
-        joint = self.data.joint("root")
+        joint = self.data.joint("torso_2023_freejoint")
 
         quat = tf.quaternion_from_matrix(T)
         pos = T[:3, 3]
@@ -239,9 +273,15 @@ class Simulator:
         return {"left": left_pressures, "right": right_pressures}
 
     def step(self) -> None:
+        if self.use_bam:
+            for ctrl in self.controllers.values():
+                ctrl["controller"].update(ctrl["dofs_state"])
+
         self.t = self.frame * self.dt
         mujoco.mj_step(self.model, self.data)
         self.frame += 1
+
+
 
     def set_gravity(self, gravity: np.ndarray) -> None:
         """

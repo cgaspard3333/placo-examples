@@ -1,0 +1,3096 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/62a76f7d866be3ef835dd2e4/v/53bc1f0fe452da20430e5612/e/579abee38f1dbd98a5a2bc84 -->
+<robot name="urdf">
+  <!-- Link torso_2023 -->
+  <link name="torso_2023">
+    <inertial>
+      <origin xyz="0.00195299 -0.000398651 0.0706493" rpy="0 0 0"/>
+      <mass value="3.21021"/>
+      <inertia ixx="0.0195525" ixy="0.000166172" ixz="0.00031206" iyy="0.0183726" iyz="-0.000170714" izz="0.0124607"/>
+    </inertial>
+    <!-- Part ecrou_2_5 -->
+    <!-- Part equerre_d -->
+    <!-- Part m2_5x8__configuration_copy_of_6 -->
+    <!-- Part fr05_s101 -->
+    <visual>
+      <origin xyz="0.0283892 -0.0559999 0.14" rpy="1.5708 -6.77236e-15 1.5994e-14"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x14__configuration__18 -->
+    <!-- Part support_lipo3200 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_2 -->
+    <!-- Part equerre_15x20 -->
+    <!-- Part m3x10__configuration__14 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_3 -->
+    <!-- Part m5x14__configuration__14 -->
+    <!-- Part m3x14__configuration__18_2 -->
+    <!-- Part emergency_button__spacing_0_005_meter -->
+    <!-- Part rondelle_3__nominal_diam_default -->
+    <!-- Part m2_5x8__configuration_copy_of_6_4 -->
+    <!-- Part m2_5x6__configuration__6 -->
+    <!-- Part ecrou_2_5_2 -->
+    <!-- Part lipo3200 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_5 -->
+    <!-- Part rondelle_3__nominal_diam_default_2 -->
+    <!-- Part m3x10__configuration__14_2 -->
+    <!-- Part hip_reinforcement -->
+    <!-- Part ecrou_2_5_3 -->
+    <!-- Part ecrou_2_5_4 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_6 -->
+    <!-- Part x_plate_23_front -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/x_plate_23_front.stl"/>
+      </geometry>
+      <material name="x_plate_23_front_material">
+        <color rgba="0.262745 0.282353 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_5 -->
+    <!-- Part m2_5x6__configuration__6_2 -->
+    <!-- Part m2_5x16__configuration__16 -->
+    <!-- Part ecrou_3_nylstop__nylstop_true -->
+    <!-- Part chestplate_marker -->
+    <visual>
+      <origin xyz="-0.0616108 7.3463e-05 0.0679601" rpy="-3.14159 -7.92116e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/chestplate_marker.stl"/>
+      </geometry>
+      <material name="chestplate_marker_material">
+        <color rgba="1 0.392157 0.392157 1.0"/>
+      </material>
+    </visual>
+    <!-- Part torso_top_plate_nuc_23 -->
+    <visual>
+      <origin xyz="0.0583892 1.47174e-07 0.135" rpy="-6.77236e-15 8.11257e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/torso_top_plate_nuc_23.stl"/>
+      </geometry>
+      <material name="torso_top_plate_nuc_23_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x14__configuration__18_3 -->
+    <!-- Part m3x10__configuration__14_3 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_7 -->
+    <!-- Part chestplate -->
+    <visual>
+      <origin xyz="-0.0626108 -1.41242e-06 0.0679121" rpy="-3.14159 -7.92116e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/chestplate.stl"/>
+      </geometry>
+      <material name="chestplate_material">
+        <color rgba="0.262745 0.282353 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part equerre_20x20 -->
+    <!-- Part m2_5x6__configuration__6_3 -->
+    <!-- Part rondelle_3__nominal_diam_default_3 -->
+    <!-- Part rondelle_3__nominal_diam_default_4 -->
+    <!-- Part m3x14__configuration__18_4 -->
+    <!-- Part m2_5x10__configuration__10 -->
+    <!-- Part ecrou_3__nylstop_false -->
+    <!-- Part ecrou_2_5_6 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_8 -->
+    <!-- Part m3x14__configuration__18_5 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_9 -->
+    <!-- Part m2_5x6__configuration__6_4 -->
+    <!-- Part ecrou_3_nylstop__nylstop_true_2 -->
+    <!-- Part m2_5x6__configuration__6_5 -->
+    <!-- Part m3x10__configuration__14_4 -->
+    <!-- Part equerre_g -->
+    <!-- Part m3x40__configuration__400 -->
+    <!-- Part abs_spacer -->
+    <!-- Part m3x10__configuration__14_5 -->
+    <!-- Part rondelle_3__nominal_diam_default_5 -->
+    <!-- Part m3x40__configuration__400_2 -->
+    <!-- Part rondelle_3__nominal_diam_default_6 -->
+    <!-- Part rondelle_3__nominal_diam_default_7 -->
+    <!-- Part m3x14__configuration__18_6 -->
+    <!-- Part abs_spacer_2 -->
+    <!-- Part ecrou_2_5_7 -->
+    <!-- Part chestplate_cover -->
+    <!-- Part ecrou_3__nylstop_false_2 -->
+    <!-- Part torso_pos -->
+    <!-- Part m3x10__configuration__14_6 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_10 -->
+    <!-- Part x_plate_23_front_2 -->
+    <visual>
+      <origin xyz="0.0573892 1.47174e-07 0.068" rpy="-3.14159 1.03188e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/x_plate_23_front.stl"/>
+      </geometry>
+      <material name="x_plate_23_front_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_11 -->
+    <!-- Part ecrou_3_nylstop__nylstop_true_3 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_12 -->
+    <!-- Part ecrou_3_nylstop__nylstop_true_4 -->
+    <!-- Part m3x40__configuration__400_3 -->
+    <!-- Part ecrou_3__nylstop_false_3 -->
+    <!-- Part ecrou_2_5_8 -->
+    <!-- Part abs_spacer_3 -->
+    <!-- Part ecrou_2_5_9 -->
+    <!-- Part button_holder -->
+    <!-- Part dxlcontroller_board -->
+    <!-- Part ecrou_2_5_10 -->
+    <!-- Part ecrou_2_5_11 -->
+    <!-- Part m3x40__configuration__400_4 -->
+    <!-- Part abs_spacer_4 -->
+    <!-- Part ecrou_3_nylstop__nylstop_true_5 -->
+    <!-- Part m2_5x10__configuration__10_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_13 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_14 -->
+    <!-- Part fr05_s101_2 -->
+    <visual>
+      <origin xyz="0.0283892 0.0560001 0.14" rpy="1.5708 -6.77236e-15 1.5994e-14"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x6__configuration__6_6 -->
+    <!-- Part ecrou_4 -->
+    <!-- Part equerre_20x20_2 -->
+    <!-- Part m3x14__configuration__18_7 -->
+    <!-- Part handle -->
+    <visual>
+      <origin xyz="-0.0476108 -0.0624999 0.14" rpy="1.55808e-15 8.11257e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/handle.stl"/>
+      </geometry>
+      <material name="handle_material">
+        <color rgba="0.717647 0.717647 0.717647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_7 -->
+    <!-- Part ecrou_3_nylstop__nylstop_true_6 -->
+    <!-- Part rondelle_3__nominal_diam_default_8 -->
+    <!-- Part rondelle_3__nominal_diam_default_9 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_15 -->
+    <!-- Part nuc -->
+    <!-- Part rondelle_3__nominal_diam_default_10 -->
+    <!-- Part ecrou_2_5_12 -->
+    <!-- Part equerre_15x20_2 -->
+    <!-- Part m3x10__configuration__14_8 -->
+    <!-- Part ecrou_2_5_13 -->
+    <!-- Part chestplate_marker_2 -->
+    <visual>
+      <origin xyz="0.0633892 -0.000376101 0.0718648" rpy="1.63054e-15 -7.92116e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/chestplate_marker.stl"/>
+      </geometry>
+      <material name="chestplate_marker_2_material">
+        <color rgba="1 0.392157 0.392157 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m5x14__configuration__14_2 -->
+    <!-- Part m2_5x10__configuration__10_3 -->
+    <!-- Part rondelle_3__nominal_diam_default_11 -->
+    <!-- Part m3x10__configuration__14_9 -->
+    <!-- Part ecrou_4_2 -->
+    <!-- Part rondelle_3__nominal_diam_default_12 -->
+    <!-- Part ecrou_2_5_14 -->
+    <!-- Part ecrou_3__nylstop_false_4 -->
+    <!-- Part m2_5x10__configuration__10_4 -->
+    <!-- Part hn05_n102 -->
+    <visual>
+      <origin xyz="0.0283892 0.0770001 0.164" rpy="-3.20714e-14 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12 -->
+    <!-- Part mx_64at_ar -->
+    <visual>
+      <origin xyz="0.0283892 0.0560001 0.164" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+    <!-- Part goupille__316f24c225edb7f5f09a678f95c02e16 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_16 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_17 -->
+    <!-- Part flexible_part -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 -0.068" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_2 -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_2.stl"/>
+      </geometry>
+      <material name="base_2_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_18 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_19 -->
+    <!-- Part flexible_part_2 -->
+    <visual>
+      <origin xyz="0.0633892 1.47174e-07 0.208" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_2_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_2_2 -->
+    <visual>
+      <origin xyz="0.0633892 1.47174e-07 0.068" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_2.stl"/>
+      </geometry>
+      <material name="base_2_2_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rondelle_3__nominal_diam_default_13 -->
+    <!-- Part m3x14__configuration__18_8 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_20 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_21 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_22 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_23 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_24 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_25 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_26 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_27 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_28 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_29 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_30 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_31 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_32 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_33 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_34 -->
+    <!-- Part hn05_n102_2 -->
+    <visual>
+      <origin xyz="0.0333892 1.47174e-07 0.178" rpy="1.5708 -2.56073e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_2_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_2 -->
+    <!-- Part mx_64at_ar_2 -->
+    <visual>
+      <origin xyz="0.0333892 1.47174e-07 0.157" rpy="-2.09856e-15 -2.56073e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_2_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_35 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_36 -->
+    <!-- Part flexible_part_3 -->
+    <visual>
+      <origin xyz="0.0633892 -0.125 0.068" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_3_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_3 -->
+    <visual>
+      <origin xyz="0.0633892 1.47174e-07 0.068" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_3.stl"/>
+      </geometry>
+      <material name="base_3_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_37 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_38 -->
+    <!-- Part flexible_part_4 -->
+    <visual>
+      <origin xyz="-0.0626108 -0.125 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_4_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_3_2 -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_3.stl"/>
+      </geometry>
+      <material name="base_3_2_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x16__configuration__16_2 -->
+    <!-- Part m2_5x16__configuration__16_3 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_39 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_40 -->
+    <!-- Part flexible_part_5 -->
+    <visual>
+      <origin xyz="0.0633892 -0.125 0.208" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_5_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_4 -->
+    <visual>
+      <origin xyz="0.0633892 1.47174e-07 0.068" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_4.stl"/>
+      </geometry>
+      <material name="base_4_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_41 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_42 -->
+    <!-- Part flexible_part_6 -->
+    <visual>
+      <origin xyz="-0.0626108 -0.125 -0.068" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_6_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_4_2 -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_4.stl"/>
+      </geometry>
+      <material name="base_4_2_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_43 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_44 -->
+    <!-- Part flexible_part_7 -->
+    <visual>
+      <origin xyz="0.0633892 1.47174e-07 0.068" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_7_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_1 -->
+    <visual>
+      <origin xyz="0.0633892 1.47174e-07 0.068" rpy="3.14159 -6.89531e-17 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_1.stl"/>
+      </geometry>
+      <material name="base_1_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part goupille__316f24c225edb7f5f09a678f95c02e16_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_45 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_46 -->
+    <!-- Part flexible_part_8 -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/flexible_part.stl"/>
+      </geometry>
+      <material name="flexible_part_8_material">
+        <color rgba="0.901961 0.901961 0.901961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part base_1_2 -->
+    <visual>
+      <origin xyz="-0.0626108 1.47174e-07 0.072" rpy="-1.44329e-15 7.92116e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/base_1.stl"/>
+      </geometry>
+      <material name="base_1_2_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_3 -->
+    <visual>
+      <origin xyz="0.0283892 -0.0769999 0.164" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_3_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_3 -->
+    <!-- Part mx_64at_ar_3 -->
+    <visual>
+      <origin xyz="0.0283892 -0.0559999 0.164" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_3_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_4 -->
+    <visual>
+      <origin xyz="0.0033892 0.0464001 0.001" rpy="-1.5708 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_4_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_4 -->
+    <!-- Part mx_64at_ar_4 -->
+    <visual>
+      <origin xyz="0.0033892 0.0464001 0.022" rpy="3.14159 -1.31382e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_4_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_10 -->
+    <!-- Part bague_serrage_3010 -->
+    <visual>
+      <origin xyz="0.0033892 0.0464001 -1.87133e-16" rpy="3.14159 -1.32573e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/bague_serrage_3010.stl"/>
+      </geometry>
+      <material name="bague_serrage_3010_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part shoulder -->
+    <visual>
+      <origin xyz="0.0033892 0.0464001 -0.00625" rpy="3.14159 -1.09431e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/shoulder.stl"/>
+      </geometry>
+      <material name="shoulder_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0"/>
+      </material>
+    </visual>
+    <!-- Part flange -->
+    <!-- Part m4x14__length__14 -->
+    <!-- Part lien_moteur -->
+    <!-- Part re3010 -->
+    <!-- Part rondelle_4__nominal_diam__40 -->
+    <!-- Part goupille__f1e6b187d03e03e444626128b697a739 -->
+    <!-- Part goupille__f1e6b187d03e03e444626128b697a739_2 -->
+    <!-- Part hn05_n102_5 -->
+    <visual>
+      <origin xyz="0.0033892 -0.0463999 0.001" rpy="-1.5708 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_5_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_5 -->
+    <!-- Part mx_64at_ar_5 -->
+    <visual>
+      <origin xyz="0.0033892 -0.0463999 0.022" rpy="3.14159 -1.27713e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_5_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_11 -->
+    <!-- Part bague_serrage_3010_2 -->
+    <visual>
+      <origin xyz="0.0033892 -0.0463999 -2.08167e-16" rpy="3.14159 -1.28904e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/bague_serrage_3010.stl"/>
+      </geometry>
+      <material name="bague_serrage_3010_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part shoulder_2 -->
+    <visual>
+      <origin xyz="0.0033892 -0.0463999 -0.00625" rpy="3.14159 -1.05762e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/shoulder.stl"/>
+      </geometry>
+      <material name="shoulder_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0"/>
+      </material>
+    </visual>
+    <!-- Part flange_2 -->
+    <!-- Part m4x14__length__14_2 -->
+    <!-- Part lien_moteur_2 -->
+    <!-- Part re3010_2 -->
+    <!-- Part rondelle_4__nominal_diam__40_2 -->
+    <!-- Part goupille__f1e6b187d03e03e444626128b697a739_3 -->
+    <!-- Part goupille__f1e6b187d03e03e444626128b697a739_4 -->
+    <!-- Part rondelle_4__nominal_diam__40_3 -->
+    <!-- Part rondelle_4__nominal_diam__40_4 -->
+    <!-- Part m4x14__length__14_3 -->
+    <!-- Part m4x14__length__14_4 -->
+    <!-- Part m4x14__length__14_5 -->
+    <!-- Part rondelle_4__nominal_diam__40_5 -->
+    <!-- Part m3x10__configuration__14_12 -->
+    <!-- Part m3x10__configuration__14_13 -->
+    <!-- Part m3x10__configuration__14_14 -->
+    <!-- Part m3x10__configuration__14_15 -->
+    <!-- Part m3x10__configuration__14_16 -->
+    <!-- Part rondelle_4__nominal_diam__40_6 -->
+    <!-- Part rondelle_4__nominal_diam__40_7 -->
+    <!-- Part m4x14__length__14_6 -->
+    <!-- Part m4x14__length__14_7 -->
+    <!-- Part m4x14__length__14_8 -->
+    <!-- Part rondelle_4__nominal_diam__40_8 -->
+    <!-- Part m3x10__configuration__14_17 -->
+    <!-- Part m3x10__configuration__14_18 -->
+    <!-- Part m3x10__configuration__14_19 -->
+    <!-- Part m3x10__configuration__14_20 -->
+    <!-- Part m3x10__configuration__14_21 -->
+  </link>
+  <!-- Frame head_base (dummy link + fixed joint) -->
+  <link name="head_base">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="head_base_frame" type="fixed">
+    <origin xyz="0.0333892 1.47174e-07 0.183" rpy="-1.22465e-16 -2.20881e-29 1.43936e-28"/>
+    <parent link="torso_2023"/>
+    <child link="head_base"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame trunk (dummy link + fixed joint) -->
+  <link name="trunk">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="trunk_frame" type="fixed">
+    <origin xyz="0.0608892 1.47174e-07 0.0025" rpy="-8.26726e-28 -0 -2.24029e-59"/>
+    <parent link="torso_2023"/>
+    <child link="trunk"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Link u_neck -->
+  <link name="u_neck">
+    <inertial>
+      <origin xyz="1.08118e-16 6.61862e-17 0.0206334" rpy="0 0 0"/>
+      <mass value="0.0544799"/>
+      <inertia ixx="3.05787e-05" ixy="-1.35944e-11" ixz="-7.83505e-21" iyy="5.16952e-05" iyz="-4.57265e-20" izz="2.98525e-05"/>
+    </inertial>
+    <!-- Part m2_5x5__configuration_size -->
+    <!-- Part m2_5x8__configuration_copy_of_6_47 -->
+    <!-- Part m2_5x5__configuration_size_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_48 -->
+    <!-- Part u_base_64 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-2.36882e-31 6.97488e-32 1.13485e-45"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_64.stl"/>
+      </geometry>
+      <material name="u_base_64_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x6__configuration__6_7 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_49 -->
+    <!-- Part m2_5x5__configuration_size_3 -->
+    <!-- Part m2_5x5__configuration_size_4 -->
+    <!-- Part m2_5x5__configuration_size_5 -->
+    <!-- Part m2_5x5__configuration_size_6 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_50 -->
+    <!-- Part m2_5x5__configuration_size_7 -->
+    <!-- Part m2_5x6__configuration__6_8 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_51 -->
+    <!-- Part m2_5x6__configuration__6_9 -->
+    <!-- Part m2_5x6__configuration__6_10 -->
+    <!-- Part m2_5x5__configuration_size_8 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_52 -->
+    <!-- Part m2_5x5__configuration_size_9 -->
+    <!-- Part u_side_neck -->
+    <visual>
+      <origin xyz="-0.0265 7.21645e-16 0.058302" rpy="1.5708 2.498e-16 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_neck.stl"/>
+      </geometry>
+      <material name="u_side_neck_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_10 -->
+    <!-- Part m2_5x5__configuration_size_11 -->
+    <!-- Part m2_5x6__configuration__6_11 -->
+    <!-- Part m2_5x6__configuration__6_12 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_53 -->
+    <!-- Part m2_5x6__configuration__6_13 -->
+    <!-- Part m2_5x6__configuration__6_14 -->
+    <!-- Part m2_5x5__configuration_size_12 -->
+    <!-- Part u_side_neck_2 -->
+    <visual>
+      <origin xyz="0.0265 -4.16334e-16 0.058302" rpy="1.5708 -2.77556e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_neck.stl"/>
+      </geometry>
+      <material name="u_side_neck_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_54 -->
+  </link>
+  <!-- Link head_2023__field_of_view_false -->
+  <link name="head_2023__field_of_view_false">
+    <inertial>
+      <origin xyz="-0.000139837 0.00397747 -0.0233757" rpy="0 0 0"/>
+      <mass value="0.257265"/>
+      <inertia ixx="0.000251684" ixy="5.01912e-06" ixz="6.27582e-07" iyy="0.000105801" iyz="3.64788e-06" izz="0.000245995"/>
+    </inertial>
+    <!-- Part m2_5x8__configuration_copy_of_6_55 -->
+    <!-- Part head_plate_d_2023 -->
+    <visual>
+      <origin xyz="-5.6205e-16 0.013 -0.0455" rpy="3.14159 2.25217e-17 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/head_plate_d_2023.stl"/>
+      </geometry>
+      <material name="head_plate_d_2023_material">
+        <color rgba="0.701961 0.682353 0.623529 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_56 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_57 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_58 -->
+    <!-- Part lens -->
+    <!-- Part m2_5x8__configuration_copy_of_6_59 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_60 -->
+    <!-- Part ptgrey_fix -->
+    <!-- Part ecrou_2_5_15 -->
+    <!-- Part ptgrey_camera -->
+    <visual>
+      <origin xyz="-0.00496822 0.0335 -0.0235" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/ptgrey_camera.stl"/>
+      </geometry>
+      <material name="ptgrey_camera_material">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_61 -->
+    <!-- Part head_plate_g_2023 -->
+    <visual>
+      <origin xyz="-1.05541e-14 0.013 -0.0015" rpy="3.14159 -1.85282e-17 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/head_plate_g_2023.stl"/>
+      </geometry>
+      <material name="head_plate_g_2023_material">
+        <color rgba="0.701961 0.682353 0.623529 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_62 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_63 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_64 -->
+    <!-- Part ecrou_2_5_16 -->
+    <!-- Part ecrou_2_5_17 -->
+    <!-- Part rx64_cap -->
+    <!-- Part m3x6__configuration__8 -->
+    <!-- Part hn05_n102_6 -->
+    <visual>
+      <origin xyz="0 2.77556e-17 -0.0025" rpy="1.5708 1.25951e-16 -0.392699"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_6_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_6 -->
+    <!-- Part hn05_i101 -->
+    <visual>
+      <origin xyz="6.93889e-18 0 -0.04314" rpy="-3.14159 -5.20891e-17 2.60516"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz -->
+    <!-- Part mx_64at_ar_6 -->
+    <visual>
+      <origin xyz="0 0 -0.0235" rpy="-4.06241e-33 -2.07808e-31 3.45127e-31"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_6_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Frame camera (dummy link + fixed joint) -->
+  <link name="camera">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="camera_frame" type="fixed">
+    <origin xyz="-0.024933 0.0335 -0.0235" rpy="-3.14159 1.5708 0"/>
+    <parent link="head_2023__field_of_view_false"/>
+    <child link="camera"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from u_neck to head_2023__field_of_view_false -->
+  <joint name="head_pitch" type="revolute">
+    <origin xyz="-0.0235 6.45317e-16 0.058302" rpy="1.5708 -2.6066e-16 -1.5708"/>
+    <parent link="u_neck"/>
+    <child link="head_2023__field_of_view_false"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.785398" upper="1.5708"/>
+  </joint>
+  <!-- Joint from torso_2023 to u_neck -->
+  <joint name="head_yaw" type="revolute">
+    <origin xyz="0.0333892 1.47174e-07 0.1805" rpy="-4.5133e-15 6.19599e-15 -1.5708"/>
+    <parent link="torso_2023"/>
+    <child link="u_neck"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-2.0944" upper="2.0944"/>
+  </joint>
+  <!-- Link u_shoulder_2023 -->
+  <link name="u_shoulder_2023">
+    <inertial>
+      <origin xyz="-1.40922e-15 0.00364642 0.0214003" rpy="0 0 0"/>
+      <mass value="0.0751043"/>
+      <inertia ixx="3.35766e-05" ixy="4.82897e-19" ixz="1.25795e-18" iyy="5.6855e-05" iyz="-1.64412e-06" izz="4.55796e-05"/>
+    </inertial>
+    <!-- Part ecrou_2_5_18 -->
+    <!-- Part u_side_shoulder_mir -->
+    <visual>
+      <origin xyz="-0.073 1.11022e-16 0.004" rpy="6.33401e-14 2.87982e-14 -4.09117e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_shoulder_mir.stl"/>
+      </geometry>
+      <material name="u_side_shoulder_mir_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part u_side_shoulder -->
+    <visual>
+      <origin xyz="2.91434e-16 2.77556e-17 0.004" rpy="6.23409e-14 2.87427e-14 -4.09117e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_shoulder.stl"/>
+      </geometry>
+      <material name="u_side_shoulder_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x10__configuration__10_5 -->
+    <!-- Part bearing -->
+    <!-- Part shoulder_protection__imp_offset_3_0e_4_meter -->
+    <!-- Part ecrou_2_5_19 -->
+    <!-- Part m2_5x6__configuration__6_15 -->
+    <!-- Part m2_5x10__configuration__10_6 -->
+    <!-- Part m2_5x5__configuration_size_13 -->
+    <!-- Part ecrou_2_5_20 -->
+    <!-- Part m2_5x10__configuration__10_7 -->
+    <!-- Part u_base_64_2 -->
+    <visual>
+      <origin xyz="2.91434e-16 2.77556e-17 0.004" rpy="6.33401e-14 2.85206e-14 -4.13003e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_64.stl"/>
+      </geometry>
+      <material name="u_base_64_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x10__configuration__10_8 -->
+    <!-- Part ecrou_2_5_21 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_65 -->
+    <!-- Part m2_5x5__configuration_size_14 -->
+    <!-- Part m2_5x5__configuration_size_15 -->
+    <!-- Part m2_5x5__configuration_size_16 -->
+    <!-- Part m2_5x5__configuration_size_17 -->
+    <!-- Part m2_5x5__configuration_size_18 -->
+    <!-- Part m2_5x5__configuration_size_19 -->
+    <!-- Part m2_5x5__configuration_size_20 -->
+    <!-- Part m2_5x5__configuration_size_21 -->
+    <!-- Part m2_5x5__configuration_size_22 -->
+    <!-- Part m2_5x6__configuration__6_16 -->
+    <!-- Part m2_5x6__configuration__6_17 -->
+    <!-- Part m2_5x6__configuration__6_18 -->
+    <!-- Part m2_5x6__configuration__6_19 -->
+    <!-- Part m2_5x6__configuration__6_20 -->
+    <!-- Part m2_5x6__configuration__6_21 -->
+    <!-- Part m2_5x6__configuration__6_22 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_66 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_67 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_68 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_69 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_70 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_71 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_72 -->
+  </link>
+  <!-- Link left_humerus_v2 -->
+  <link name="left_humerus_v2">
+    <inertial>
+      <origin xyz="0.000328884 -0.0525856 -0.0274205" rpy="0 0 0"/>
+      <mass value="0.252204"/>
+      <inertia ixx="0.000740403" ixy="5.43942e-06" ixz="9.57405e-07" iyy="9.0229e-05" iyz="-6.1364e-05" izz="0.000725604"/>
+    </inertial>
+    <!-- Part fr05_h101 -->
+    <visual>
+      <origin xyz="1.9984e-14 -0.139 -0.003125" rpy="-1.5708 1.56119e-32 -1.00227e-19"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_h101.stl"/>
+      </geometry>
+      <material name="fr05_h101_material">
+        <color rgba="0.501961 0.486275 0.439216 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_73 -->
+    <!-- Part elbow_protection -->
+    <!-- Part ecrou_2_5_22 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_74 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_75 -->
+    <!-- Part m2_5x4__configuration_default -->
+    <!-- Part ecrou_2_5_23 -->
+    <!-- Part m2_5x6__configuration__6_23 -->
+    <!-- Part humerus_plate -->
+    <visual>
+      <origin xyz="0.015 -0.154 -0.042125" rpy="-1.00227e-19 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/humerus_plate.stl"/>
+      </geometry>
+      <material name="humerus_plate_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x6__configuration__6_24 -->
+    <!-- Part ecrou_2_5_24 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_76 -->
+    <!-- Part m2_5x4__configuration_default_2 -->
+    <!-- Part ecrou_2_5_25 -->
+    <!-- Part ecrou_2_5_26 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_77 -->
+    <!-- Part ecrou_2_5_27 -->
+    <!-- Part m2_5x5__configuration_size_23 -->
+    <!-- Part m2_5x4__configuration_default_3 -->
+    <!-- Part ecrou_2_5_28 -->
+    <!-- Part m2_5x4__configuration_default_4 -->
+    <!-- Part ecrou_2_5_29 -->
+    <!-- Part m2_5x5__configuration_size_24 -->
+    <!-- Part ecrou_2_5_30 -->
+    <!-- Part ecrou_2_5_31 -->
+    <!-- Part m2_5x4__configuration_default_5 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_78 -->
+    <!-- Part m2_5x5__configuration_size_25 -->
+    <!-- Part fr05_s101_3 -->
+    <visual>
+      <origin xyz="2.77556e-17 -0.052 -0.0235" rpy="-8.10658e-30 1.56119e-32 -1.00227e-19"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_3_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_79 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_80 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_81 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_82 -->
+    <!-- Part m2_5x4__configuration_default_6 -->
+    <!-- Part m2_5x5__configuration_size_26 -->
+    <!-- Part rx64_cap_2 -->
+    <!-- Part m3x6__configuration__8_2 -->
+    <!-- Part hn05_n102_7 -->
+    <visual>
+      <origin xyz="2.77556e-17 1.38778e-17 -0.0025" rpy="1.5708 1.56119e-32 -1.00227e-19"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_7_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_7 -->
+    <!-- Part hn05_i101_2 -->
+    <visual>
+      <origin xyz="2.77556e-17 0 -0.04314" rpy="-3.14159 -1.30477e-29 -1.38987"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_2_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_2 -->
+    <!-- Part mx_64at_ar_7 -->
+    <visual>
+      <origin xyz="0 1.38778e-17 -0.0235" rpy="-8.10658e-30 1.56119e-32 -1.00227e-19"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_7_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Link radius_v2 -->
+  <link name="radius_v2">
+    <inertial>
+      <origin xyz="7.98171e-05 -0.0556905 -0.0234333" rpy="0 0 0"/>
+      <mass value="0.256846"/>
+      <inertia ixx="0.000937241" ixy="-7.92686e-07" ixz="6.13956e-07" iyy="0.000130597" iyz="1.97866e-06" izz="0.000947054"/>
+    </inertial>
+    <!-- Part ecrou_2_5_32 -->
+    <!-- Part entretoise_m_f_20xm3__length__20 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_83 -->
+    <!-- Part m3x8__configuration__12_8 -->
+    <!-- Part hand_2023 -->
+    <visual>
+      <origin xyz="0 -0.1496 -0.0065" rpy="-1.31341e-16 -6.5671e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hand_2023.stl"/>
+      </geometry>
+      <material name="hand_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_33 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_84 -->
+    <!-- Part entretoise_f_f_14xm3__length__14 -->
+    <!-- Part ecrou_2_5_34 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_2 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_85 -->
+    <!-- Part m3x8__configuration__12_9 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_3 -->
+    <!-- Part m3x8__configuration__12_10 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_86 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_4 -->
+    <!-- Part hand_2023_2 -->
+    <visual>
+      <origin xyz="1.38778e-17 -0.1496 -0.0435" rpy="1.43133e-15 -7.37039e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hand_2023.stl"/>
+      </geometry>
+      <material name="hand_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_11 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_87 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_88 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_89 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_90 -->
+    <!-- Part m3x8__configuration__12_12 -->
+    <!-- Part m3x8__configuration__12_13 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_3 -->
+    <!-- Part ecrou_2_5_35 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_4 -->
+    <!-- Part m3x8__configuration__12_14 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_91 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_92 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_93 -->
+    <!-- Part ecrou_2_5_36 -->
+    <!-- Part m3x8__configuration__12_15 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_94 -->
+    <!-- Part ecrou_2_5_37 -->
+    <!-- Part rx64_cap_3 -->
+    <!-- Part m3x6__configuration__8_3 -->
+    <!-- Part hn05_n102_8 -->
+    <visual>
+      <origin xyz="0 0 -0.0025" rpy="1.5708 3.78588e-31 4.29801e-30"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_8_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_16 -->
+    <!-- Part hn05_i101_3 -->
+    <visual>
+      <origin xyz="-6.93889e-18 2.08167e-17 -0.04314" rpy="-3.14159 -1.4992e-14 -2.60447"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_3_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_3 -->
+    <!-- Part mx_64at_ar_8 -->
+    <visual>
+      <origin xyz="0 6.93889e-18 -0.0235" rpy="-8.19327e-16 -3.96025e-16 1.25278e-16"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_8_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from left_humerus_v2 to radius_v2 -->
+  <joint name="left_elbow" type="revolute">
+    <origin xyz="0.0235 -0.139 -0.003125" rpy="-3.68277e-18 1.5708 0"/>
+    <parent link="left_humerus_v2"/>
+    <child link="radius_v2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-2.79253" upper="0.261799"/>
+  </joint>
+  <!-- Joint from u_shoulder_2023 to left_humerus_v2 -->
+  <joint name="left_shoulder_roll" type="revolute">
+    <origin xyz="0.0235 0.03 0.03" rpy="-1.5708 -1.309 -1.5708"/>
+    <parent link="u_shoulder_2023"/>
+    <child link="left_humerus_v2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.261799" upper="1.309"/>
+  </joint>
+  <!-- Joint from torso_2023 to u_shoulder_2023 -->
+  <joint name="left_shoulder_pitch" type="revolute">
+    <origin xyz="0.0283892 0.0795001 0.164" rpy="-1.5708 -6.77236e-15 3.01171e-14"/>
+    <parent link="torso_2023"/>
+    <child link="u_shoulder_2023"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-2.18166" upper="2.18166"/>
+  </joint>
+  <!-- Link u_shoulder_2023_2 -->
+  <link name="u_shoulder_2023_2">
+    <inertial>
+      <origin xyz="3.90103e-15 -0.00364642 -0.0214003" rpy="0 0 0"/>
+      <mass value="0.0751043"/>
+      <inertia ixx="3.35766e-05" ixy="-4.51309e-19" ixz="1.84471e-18" iyy="5.6855e-05" iyz="-1.64412e-06" izz="4.55796e-05"/>
+    </inertial>
+    <!-- Part ecrou_2_5_38 -->
+    <!-- Part u_side_shoulder_mir_2 -->
+    <visual>
+      <origin xyz="-0.073 -4.66294e-15 -0.004" rpy="3.14159 2.56281e-15 3.93123e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_shoulder_mir.stl"/>
+      </geometry>
+      <material name="u_side_shoulder_mir_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part u_side_shoulder_2 -->
+    <visual>
+      <origin xyz="6.59195e-17 1.66533e-16 -0.004" rpy="3.14159 2.68771e-15 3.93401e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_shoulder.stl"/>
+      </geometry>
+      <material name="u_side_shoulder_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x10__configuration__10_9 -->
+    <!-- Part bearing_2 -->
+    <!-- Part shoulder_protection__imp_offset_3_0e_4_meter_2 -->
+    <!-- Part ecrou_2_5_39 -->
+    <!-- Part m2_5x6__configuration__6_25 -->
+    <!-- Part m2_5x10__configuration__10_10 -->
+    <!-- Part m2_5x5__configuration_size_27 -->
+    <!-- Part ecrou_2_5_40 -->
+    <!-- Part m2_5x10__configuration__10_11 -->
+    <!-- Part u_base_64_3 -->
+    <visual>
+      <origin xyz="6.59195e-17 1.66533e-16 -0.004" rpy="3.14159 2.5073e-15 3.93366e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_64.stl"/>
+      </geometry>
+      <material name="u_base_64_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x10__configuration__10_12 -->
+    <!-- Part ecrou_2_5_41 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_95 -->
+    <!-- Part m2_5x5__configuration_size_28 -->
+    <!-- Part m2_5x5__configuration_size_29 -->
+    <!-- Part m2_5x5__configuration_size_30 -->
+    <!-- Part m2_5x5__configuration_size_31 -->
+    <!-- Part m2_5x5__configuration_size_32 -->
+    <!-- Part m2_5x5__configuration_size_33 -->
+    <!-- Part m2_5x5__configuration_size_34 -->
+    <!-- Part m2_5x5__configuration_size_35 -->
+    <!-- Part m2_5x5__configuration_size_36 -->
+    <!-- Part m2_5x6__configuration__6_26 -->
+    <!-- Part m2_5x6__configuration__6_27 -->
+    <!-- Part m2_5x6__configuration__6_28 -->
+    <!-- Part m2_5x6__configuration__6_29 -->
+    <!-- Part m2_5x6__configuration__6_30 -->
+    <!-- Part m2_5x6__configuration__6_31 -->
+    <!-- Part m2_5x6__configuration__6_32 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_96 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_97 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_98 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_99 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_100 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_101 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_102 -->
+  </link>
+  <!-- Link right_humerus_v2 -->
+  <link name="right_humerus_v2">
+    <inertial>
+      <origin xyz="-0.000166311 -0.0525856 -0.0274058" rpy="0 0 0"/>
+      <mass value="0.252204"/>
+      <inertia ixx="0.000740432" ixy="-6.89747e-06" ixz="1.06408e-07" iyy="9.02784e-05" iyz="-6.13911e-05" izz="0.000725625"/>
+    </inertial>
+    <!-- Part fr05_h101_2 -->
+    <visual>
+      <origin xyz="-1.00753e-14 -0.139 -0.003125" rpy="-1.5708 3.72595e-29 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_h101.stl"/>
+      </geometry>
+      <material name="fr05_h101_2_material">
+        <color rgba="0.501961 0.486275 0.439216 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_103 -->
+    <!-- Part humerus_plate_2 -->
+    <visual>
+      <origin xyz="0.015 -0.154 -0.042125" rpy="1.15784e-14 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/humerus_plate.stl"/>
+      </geometry>
+      <material name="humerus_plate_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_42 -->
+    <!-- Part m2_5x4__configuration_default_7 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_104 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_105 -->
+    <!-- Part m2_5x5__configuration_size_37 -->
+    <!-- Part ecrou_2_5_43 -->
+    <!-- Part m2_5x6__configuration__6_33 -->
+    <!-- Part m2_5x6__configuration__6_34 -->
+    <!-- Part ecrou_2_5_44 -->
+    <!-- Part m2_5x4__configuration_default_8 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_106 -->
+    <!-- Part elbow_protection_2 -->
+    <!-- Part m2_5x4__configuration_default_9 -->
+    <!-- Part ecrou_2_5_45 -->
+    <!-- Part m2_5x5__configuration_size_38 -->
+    <!-- Part ecrou_2_5_46 -->
+    <!-- Part m2_5x4__configuration_default_10 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_107 -->
+    <!-- Part ecrou_2_5_47 -->
+    <!-- Part ecrou_2_5_48 -->
+    <!-- Part m2_5x5__configuration_size_39 -->
+    <!-- Part ecrou_2_5_49 -->
+    <!-- Part m2_5x5__configuration_size_40 -->
+    <!-- Part ecrou_2_5_50 -->
+    <!-- Part ecrou_2_5_51 -->
+    <!-- Part m2_5x4__configuration_default_11 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_108 -->
+    <!-- Part m2_5x4__configuration_default_12 -->
+    <!-- Part fr05_s101_4 -->
+    <visual>
+      <origin xyz="-1.00198e-14 -0.052 -0.0235" rpy="-3.14159 -7.64204e-31 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_4_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_109 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_110 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_111 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_112 -->
+    <!-- Part rx64_cap_4 -->
+    <!-- Part m3x6__configuration__8_4 -->
+    <!-- Part hn05_n102_9 -->
+    <visual>
+      <origin xyz="0 -1.38778e-17 -0.0025" rpy="1.5708 1.02996e-30 -2.99218e-17"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_9_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_17 -->
+    <!-- Part hn05_i101_4 -->
+    <visual>
+      <origin xyz="0 0 -0.04314" rpy="3.14159 -1.25669e-16 -1.38987"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_4_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_4 -->
+    <!-- Part mx_64at_ar_9 -->
+    <visual>
+      <origin xyz="0 -1.38778e-17 -0.0235" rpy="-1.23464e-31 7.64204e-31 -4.05776e-18"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_9_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Link radius_v2_2 -->
+  <link name="radius_v2_2">
+    <inertial>
+      <origin xyz="7.98171e-05 0.0556905 0.0234333" rpy="0 0 0"/>
+      <mass value="0.256846"/>
+      <inertia ixx="0.000937241" ixy="7.92686e-07" ixz="-6.13956e-07" iyy="0.000130597" iyz="1.97866e-06" izz="0.000947054"/>
+    </inertial>
+    <!-- Part ecrou_2_5_52 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_5 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_113 -->
+    <!-- Part m3x8__configuration__12_18 -->
+    <!-- Part hand_2023_3 -->
+    <visual>
+      <origin xyz="-4.55885e-15 0.1496 0.0065" rpy="3.14159 -9.60031e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hand_2023.stl"/>
+      </geometry>
+      <material name="hand_2023_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_53 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_114 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_5 -->
+    <!-- Part ecrou_2_5_54 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_6 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_6 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_115 -->
+    <!-- Part m3x8__configuration__12_19 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_7 -->
+    <!-- Part m3x8__configuration__12_20 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_116 -->
+    <!-- Part entretoise_m_f_20xm3__length__20_8 -->
+    <!-- Part hand_2023_4 -->
+    <visual>
+      <origin xyz="-3.96211e-15 0.1496 0.0435" rpy="3.14159 -9.69077e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hand_2023.stl"/>
+      </geometry>
+      <material name="hand_2023_4_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_21 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_117 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_118 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_119 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_120 -->
+    <!-- Part m3x8__configuration__12_22 -->
+    <!-- Part m3x8__configuration__12_23 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_7 -->
+    <!-- Part ecrou_2_5_55 -->
+    <!-- Part entretoise_f_f_14xm3__length__14_8 -->
+    <!-- Part m3x8__configuration__12_24 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_121 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_122 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_123 -->
+    <!-- Part ecrou_2_5_56 -->
+    <!-- Part m3x8__configuration__12_25 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_124 -->
+    <!-- Part ecrou_2_5_57 -->
+    <!-- Part rx64_cap_5 -->
+    <!-- Part m3x6__configuration__8_5 -->
+    <!-- Part hn05_n102_10 -->
+    <visual>
+      <origin xyz="-6.93889e-18 0 0.0025" rpy="-1.5708 2.07105e-30 1.12342e-31"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_10_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_26 -->
+    <!-- Part hn05_i101_5 -->
+    <visual>
+      <origin xyz="-1.8735e-16 6.93889e-18 0.04314" rpy="-3.02027e-15 -1.02472e-14 2.05237"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_5_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_5 -->
+    <!-- Part mx_64at_ar_10 -->
+    <visual>
+      <origin xyz="-1.04083e-16 -6.93889e-18 0.0235" rpy="-3.14159 -2.52588e-17 5.07013e-17"/>
+      <geometry>
+        <mesh filename="package://assets/mx_64at_ar.stl"/>
+      </geometry>
+      <material name="mx_64at_ar_10_material">
+        <color rgba="0.168627 0.168627 0.168627 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from right_humerus_v2 to radius_v2_2 -->
+  <joint name="right_elbow" type="revolute">
+    <origin xyz="-0.0235 -0.139 -0.003125" rpy="-3.14159 -1.5708 0"/>
+    <parent link="right_humerus_v2"/>
+    <child link="radius_v2_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-2.79253" upper="0.261799"/>
+  </joint>
+  <!-- Joint from u_shoulder_2023_2 to right_humerus_v2 -->
+  <joint name="right_shoulder_roll" type="revolute">
+    <origin xyz="-0.0235 -0.03 -0.03" rpy="1.5708 -1.309 -1.5708"/>
+    <parent link="u_shoulder_2023_2"/>
+    <child link="right_humerus_v2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.309" upper="0.261799"/>
+  </joint>
+  <!-- Joint from torso_2023 to u_shoulder_2023_2 -->
+  <joint name="right_shoulder_pitch" type="revolute">
+    <origin xyz="0.0283892 -0.0794999 0.164" rpy="1.5708 4.84823e-14 -3.14159"/>
+    <parent link="torso_2023"/>
+    <child link="u_shoulder_2023_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-2.18166" upper="2.18166"/>
+  </joint>
+  <!-- Link u_block_2023 -->
+  <link name="u_block_2023">
+    <inertial>
+      <origin xyz="-0.00509532 -8.44195e-07 -0.00985131" rpy="0 0 0"/>
+      <mass value="0.0630136"/>
+      <inertia ixx="2.02694e-05" ixy="1.52007e-09" ixz="-2.02393e-06" iyy="4.24266e-05" iyz="-2.00442e-09" izz="3.52575e-05"/>
+    </inertial>
+    <!-- Part u_side_small_2023 -->
+    <visual>
+      <origin xyz="-0.03294 0.01875 0" rpy="-1.5708 -1.3189e-24 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small_2023.stl"/>
+      </geometry>
+      <material name="u_side_small_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x4__configuration_default_13 -->
+    <!-- Part m2_5x5__configuration_size_41 -->
+    <!-- Part m2_5x4__configuration_default_14 -->
+    <!-- Part m2_5x25__configuration__25 -->
+    <!-- Part m2_5x4__configuration_default_15 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_125 -->
+    <!-- Part m2_5x25__configuration__25_2 -->
+    <!-- Part u_base_motors_blocs_2023 -->
+    <visual>
+      <origin xyz="-0.03094 0.01875 3.46945e-18" rpy="3.14159 -0 -6.60514e-31"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_motors_blocs_2023.stl"/>
+      </geometry>
+      <material name="u_base_motors_blocs_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_126 -->
+    <!-- Part m2_5x4__configuration_default_16 -->
+    <!-- Part m2_5x25__configuration__25_3 -->
+    <!-- Part m2_5x25__configuration__25_4 -->
+    <!-- Part m2_5x25__configuration__25_5 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_127 -->
+    <!-- Part m2_5x5__configuration_size_42 -->
+    <!-- Part m2_5x4__configuration_default_17 -->
+    <!-- Part m2_5x25__configuration__25_6 -->
+    <!-- Part m2_5x4__configuration_default_18 -->
+    <!-- Part m2_5x5__configuration_size_43 -->
+    <!-- Part m2_5x5__configuration_size_44 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_128 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_129 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_130 -->
+    <!-- Part m2_5x5__configuration_size_45 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_131 -->
+    <!-- Part m2_5x25__configuration__25_7 -->
+    <!-- Part m2_5x5__configuration_size_46 -->
+    <!-- Part u_side_small_with_trace_2023 -->
+    <visual>
+      <origin xyz="0.0234 -0.01875 -3.46945e-18" rpy="-1.5708 2.22045e-16 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small_with_trace_2023.stl"/>
+      </geometry>
+      <material name="u_side_small_with_trace_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_132 -->
+    <!-- Part m2_5x25__configuration__25_8 -->
+  </link>
+  <!-- Link mx106_block_hip__configuration_hip -->
+  <link name="mx106_block_hip__configuration_hip">
+    <inertial>
+      <origin xyz="0.000114176 -0.0150181 0.00430854" rpy="0 0 0"/>
+      <mass value="0.4071"/>
+      <inertia ixx="0.000435657" ixy="-1.8283e-06" ixz="-8.62791e-07" iyy="0.000381691" iyz="-3.40819e-05" izz="0.000191264"/>
+    </inertial>
+    <!-- Part m2_5x4__configuration_default_19 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_133 -->
+    <!-- Part m2_5x10__configuration__10_13 -->
+    <!-- Part hn05_i101_6 -->
+    <visual>
+      <origin xyz="-3.52496e-15 -3.98293e-15 0.04962" rpy="4.11893e-14 2.44249e-15 -2.39253e-14"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_6_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_6 -->
+    <!-- Part m2_5x4__configuration_default_20 -->
+    <!-- Part m3x6__configuration__8_6 -->
+    <!-- Part m2_5x4__configuration_default_21 -->
+    <!-- Part m2_5x10__configuration__10_14 -->
+    <!-- Part m2_5x10__configuration__10_15 -->
+    <!-- Part m2_5x4__configuration_default_22 -->
+    <!-- Part m2_5x6__configuration__6_35 -->
+    <!-- Part ecrou_2_5_58 -->
+    <!-- Part fr05_s101_5 -->
+    <visual>
+      <origin xyz="-3.41394e-15 -3.91354e-15 0.0474" rpy="-1.5708 -2.90878e-14 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_5_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part fr05_s101_6 -->
+    <visual>
+      <origin xyz="-3.49026e-15 -0.036 -0.0006" rpy="1.5708 3.53051e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_6_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_59 -->
+    <!-- Part fr08_b101 -->
+    <!-- Part ecrou_2_5_60 -->
+    <!-- Part m2_5x6__configuration__6_36 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_134 -->
+    <!-- Part m2_5x4__configuration_default_23 -->
+    <!-- Part m2_5x4__configuration_default_24 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_135 -->
+    <!-- Part m2_5x4__configuration_default_25 -->
+    <!-- Part m2_5x6__configuration__6_37 -->
+    <!-- Part fr05_f101 -->
+    <visual>
+      <origin xyz="-3.44169e-15 -3.91354e-15 0.0474" rpy="4.21885e-15 -8.88178e-16 -2.22045e-16"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_f101.stl"/>
+      </geometry>
+      <material name="fr05_f101_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_136 -->
+    <!-- Part m2_5x4__configuration_default_26 -->
+    <!-- Part rx64_cap_6 -->
+    <!-- Part m2_5x6__configuration__6_38 -->
+    <!-- Part ecrou_2_5_61 -->
+    <!-- Part m2_5x10__configuration__10_16 -->
+    <!-- Part m3x6__configuration__8_7 -->
+    <!-- Part hn05_i101_7 -->
+    <visual>
+      <origin xyz="-0.02214 -1.57513e-15 0.0234" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_7_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rx64_cap_7 -->
+    <!-- Part mf128zz_7 -->
+    <!-- Part mx106 -->
+    <visual>
+      <origin xyz="-2.51188e-15 -2.60209e-15 0.0234" rpy="5.77871e-14 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_11 -->
+    <visual>
+      <origin xyz="-1.10328e-15 -1.34615e-15 -0.0025" rpy="1.5708 -9.91566e-14 0.392699"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_11_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mx106_2 -->
+    <visual>
+      <origin xyz="6.93889e-18 6.93889e-18 -0.026" rpy="-6.63198e-31 1.66561e-30 -2.82002e-33"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_27 -->
+    <!-- Part washer_ba1226 -->
+    <!-- Part washer_ba1226_2 -->
+    <!-- Part hn05_n102_12 -->
+    <visual>
+      <origin xyz="0.027 2.50494e-15 0.0234" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_12_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part core_ba1226 -->
+    <!-- Part m3x10__configuration__14_22 -->
+  </link>
+  <!-- Link left_knee_2023 -->
+  <link name="left_knee_2023">
+    <inertial>
+      <origin xyz="-2.9715e-05 0.1015 -0.0290323" rpy="0 0 0"/>
+      <mass value="0.275516"/>
+      <inertia ixx="0.000556638" ixy="-1.38125e-07" ixz="9.89675e-10" iyy="0.000127517" iyz="7.92496e-06" izz="0.000475295"/>
+    </inertial>
+    <!-- Part femur_marker -->
+    <!-- Part m2_5x8__configuration_copy_of_6_137 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_138 -->
+    <!-- Part ecrou_2_5_62 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_139 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_140 -->
+    <!-- Part ecrou_2_5_63 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_141 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_142 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_143 -->
+    <!-- Part m2_5x6__configuration__6_39 -->
+    <!-- Part ecrou_2_5_64 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_144 -->
+    <!-- Part m2_5x6__configuration__6_40 -->
+    <!-- Part ecrou_2_5_65 -->
+    <!-- Part ecrou_2_5_66 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_145 -->
+    <!-- Part fr05_s101_7 -->
+    <visual>
+      <origin xyz="-2.91911e-15 0.0855 -0.0295" rpy="-3.44169e-13 -3.55271e-15 2.06613e-13"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_7_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_146 -->
+    <!-- Part ecrou_2_5_67 -->
+    <!-- Part ecrou_2_5_68 -->
+    <!-- Part ecrou_2_5_69 -->
+    <!-- Part ecrou_2_5_70 -->
+    <!-- Part ecrou_2_5_71 -->
+    <!-- Part m3x6__configuration__8_8 -->
+    <!-- Part hn05_i101_8 -->
+    <visual>
+      <origin xyz="-8.18746e-15 0.14 -0.05164" rpy="-3.14159 -1.05471e-15 8.32667e-16"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_8_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rx64_cap_8 -->
+    <!-- Part mf128zz_8 -->
+    <!-- Part mx106_3 -->
+    <visual>
+      <origin xyz="-6.22289e-15 0.14 -0.0295" rpy="-3.44169e-13 -3.55271e-15 2.06613e-13"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_47 -->
+    <!-- Part parallel_pin_2_x_5__8a96b601dde6ec1f6b30033940938144 -->
+    <!-- Part u_base_106_2023 -->
+    <visual>
+      <origin xyz="-2.91911e-15 0.0855 -0.0295" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_106_2023.stl"/>
+      </geometry>
+      <material name="u_base_106_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part u_side_femur_mir_2023 -->
+    <visual>
+      <origin xyz="3.30942e-15 0.0855 0.003" rpy="3.14159 8.00471e-14 4.61853e-14"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_femur_mir_2023.stl"/>
+      </geometry>
+      <material name="u_side_femur_mir_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part parallel_pin_2_x_5__8a96b601dde6ec1f6b30033940938144_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_147 -->
+    <!-- Part u_side_femur_2023 -->
+    <visual>
+      <origin xyz="-4.33681e-19 0.0855 0.003" rpy="-3.14159 3.26574e-30 4.93038e-32"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_femur_2023.stl"/>
+      </geometry>
+      <material name="u_side_femur_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_13 -->
+    <visual>
+      <origin xyz="-3.86887e-15 0.14 -0.0035" rpy="1.5708 1.59237e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_13_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_23 -->
+    <!-- Part washer_ba1226_3 -->
+    <!-- Part core_ba1226_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_148 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_149 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_150 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_151 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_152 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_153 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_154 -->
+    <!-- Part m2_5x5__configuration_size_48 -->
+    <!-- Part m2_5x5__configuration_size_49 -->
+    <!-- Part m2_5x5__configuration_size_50 -->
+    <!-- Part m2_5x5__configuration_size_51 -->
+    <!-- Part m2_5x5__configuration_size_52 -->
+    <!-- Part m2_5x5__configuration_size_53 -->
+    <!-- Part m2_5x5__configuration_size_54 -->
+    <!-- Part m2_5x5__configuration_size_55 -->
+    <!-- Part m2_5x5__configuration_size_56 -->
+    <!-- Part m2_5x5__configuration_size_57 -->
+    <!-- Part m2_5x5__configuration_size_58 -->
+  </link>
+  <!-- Link tibia_2023 -->
+  <link name="tibia_2023">
+    <inertial>
+      <origin xyz="-0.00296199 0.0631405 -0.0268398" rpy="0 0 0"/>
+      <mass value="0.113077"/>
+      <inertia ixx="0.000351809" ixy="-6.49234e-06" ixz="2.04037e-08" iyy="0.000103918" iyz="-6.19964e-08" izz="0.00027164"/>
+    </inertial>
+    <!-- Part tibia_marker -->
+    <visual>
+      <origin xyz="-0.000302197 -0.000312442 0.006" rpy="3.14159 1.08332e-30 -5.55112e-17"/>
+      <geometry>
+        <mesh filename="package://assets/tibia_marker.stl"/>
+      </geometry>
+      <material name="tibia_marker_material">
+        <color rgba="1 0.392157 0.392157 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_59 -->
+    <!-- Part m2_5x5__configuration_size_60 -->
+    <!-- Part m2_5x5__configuration_size_61 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_155 -->
+    <!-- Part ecrou_2_5_72 -->
+    <!-- Part m2_5x5__configuration_size_62 -->
+    <!-- Part renfort_tibia__configuration_simple_bearing -->
+    <visual>
+      <origin xyz="-0.00523756 0.038 -0.02722" rpy="4.52138e-14 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/renfort_tibia__configuration_simple_bearing.stl"/>
+      </geometry>
+      <material name="renfort_tibia__configuration_simple_bearing_material">
+        <color rgba="0.262745 0.282353 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_63 -->
+    <!-- Part m2_5x5__configuration_size_64 -->
+    <!-- Part m2_5x5__configuration_size_65 -->
+    <!-- Part m2_5x5__configuration_size_66 -->
+    <!-- Part m2_5x5__configuration_size_67 -->
+    <!-- Part m2_5x5__configuration_size_68 -->
+    <!-- Part ecrou_2_5_73 -->
+    <!-- Part m2_5x5__configuration_size_69 -->
+    <!-- Part m2_5x5__configuration_size_70 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_156 -->
+    <!-- Part tibia_plate_2023 -->
+    <visual>
+      <origin xyz="7.19173e-15 -4.16334e-16 -0.05444" rpy="3.14159 -1.73315e-30 -1.15371e-29"/>
+      <geometry>
+        <mesh filename="package://assets/tibia_plate_2023.stl"/>
+      </geometry>
+      <material name="tibia_plate_2023_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part tibia_plate_2023_2 -->
+    <visual>
+      <origin xyz="4.33681e-19 0 0.003" rpy="3.14159 -1.73315e-30 -1.15371e-29"/>
+      <geometry>
+        <mesh filename="package://assets/tibia_plate_2023.stl"/>
+      </geometry>
+      <material name="tibia_plate_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_71 -->
+    <!-- Part m2_5x5__configuration_size_72 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_157 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_158 -->
+    <!-- Part ecrou_2_5_74 -->
+    <!-- Part m2_5x5__configuration_size_73 -->
+    <!-- Part m2_5x5__configuration_size_74 -->
+    <!-- Part m2_5x5__configuration_size_75 -->
+    <!-- Part m2_5x5__configuration_size_76 -->
+    <!-- Part m2_5x5__configuration_size_77 -->
+    <!-- Part m2_5x5__configuration_size_78 -->
+    <!-- Part m2_5x5__configuration_size_79 -->
+    <!-- Part m2_5x5__configuration_size_80 -->
+    <!-- Part m2_5x5__configuration_size_81 -->
+    <!-- Part m2_5x5__configuration_size_82 -->
+    <!-- Part m2_5x5__configuration_size_83 -->
+    <!-- Part m2_5x5__configuration_size_84 -->
+    <!-- Part m2_5x5__configuration_size_85 -->
+    <!-- Part m2_5x5__configuration_size_86 -->
+    <!-- Part m2_5x5__configuration_size_87 -->
+    <!-- Part m2_5x5__configuration_size_88 -->
+    <!-- Part ecrou_2_5_75 -->
+    <!-- Part m2_5x5__configuration_size_89 -->
+    <!-- Part m2_5x5__configuration_size_90 -->
+  </link>
+  <!-- Link mx106_covered_block_mir_ankle__configuration_default -->
+  <link name="mx106_covered_block_mir_ankle__configuration_default">
+    <inertial>
+      <origin xyz="0.0194964 0.0165818 -0.0285982" rpy="0 0 0"/>
+      <mass value="0.421345"/>
+      <inertia ixx="0.000211526" ixy="-3.74439e-05" ixz="-7.82088e-07" iyy="0.00039924" iyz="4.49439e-07" izz="0.000472476"/>
+    </inertial>
+    <!-- Part m2_5x4__configuration_default_27 -->
+    <!-- Part m2_5x6__configuration__6_41 -->
+    <!-- Part m2_5x10__configuration__10_17 -->
+    <!-- Part hn05_i101_9 -->
+    <visual>
+      <origin xyz="-0.02622 -2.33147e-15 -0.0285" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_9_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_76 -->
+    <!-- Part mf128zz_9 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_159 -->
+    <!-- Part m2_5x4__configuration_default_28 -->
+    <!-- Part m3x6__configuration__8_9 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_160 -->
+    <!-- Part m2_5x4__configuration_default_29 -->
+    <!-- Part m2_5x10__configuration__10_18 -->
+    <!-- Part m2_5x10__configuration__10_19 -->
+    <!-- Part m2_5x4__configuration_default_30 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_161 -->
+    <!-- Part ecrou_2_5_77 -->
+    <!-- Part fr05_s101_8 -->
+    <visual>
+      <origin xyz="-0.024 -2.498e-15 -0.0285" rpy="-4.08387e-14 -2.23701e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_8_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part fr05_s101_9 -->
+    <visual>
+      <origin xyz="0.024 0.036 -0.0285" rpy="4.84992e-14 3.89125e-14 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_9_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_78 -->
+    <!-- Part fr08_b101_2 -->
+    <!-- Part ecrou_2_5_79 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_162 -->
+    <!-- Part m2_5x6__configuration__6_42 -->
+    <!-- Part m2_5x4__configuration_default_31 -->
+    <!-- Part m2_5x4__configuration_default_32 -->
+    <!-- Part m2_5x6__configuration__6_43 -->
+    <!-- Part ankle_cover -->
+    <!-- Part m2_5x4__configuration_default_33 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_163 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_164 -->
+    <!-- Part fr05_f101_2 -->
+    <visual>
+      <origin xyz="-0.024 -2.44249e-15 -0.0285" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_f101.stl"/>
+      </geometry>
+      <material name="fr05_f101_2_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x6__configuration__6_44 -->
+    <!-- Part m2_5x4__configuration_default_34 -->
+    <!-- Part rx64_cap_9 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_165 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_166 -->
+    <!-- Part ecrou_2_5_80 -->
+    <!-- Part m2_5x10__configuration__10_20 -->
+    <!-- Part ecrou_2_5_81 -->
+    <!-- Part m3x6__configuration__8_10 -->
+    <!-- Part hn05_i101_10 -->
+    <visual>
+      <origin xyz="-3.79514e-15 -3.4972e-15 -0.05064" rpy="-3.14159 6.34668e-14 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_10_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rx64_cap_10 -->
+    <!-- Part mf128zz_10 -->
+    <!-- Part mx106_4 -->
+    <visual>
+      <origin xyz="-2.22608e-15 -1.83187e-15 -0.0285" rpy="-6.60668e-15 -6.31958e-14 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_4_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_14 -->
+    <visual>
+      <origin xyz="0.0259 -1.44329e-15 -0.0285" rpy="-9.1142e-14 1.1781 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_14_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mx106_5 -->
+    <visual>
+      <origin xyz="0.0494 -1.94289e-15 -0.0285" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_5_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_28 -->
+    <!-- Part hn05_n102_15 -->
+    <visual>
+      <origin xyz="-4.33681e-19 -5.55112e-17 -0.0025" rpy="1.5708 2.57556e-31 2.5638e-30"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_15_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_24 -->
+    <!-- Part washer_ba1226_4 -->
+    <!-- Part core_ba1226_3 -->
+  </link>
+  <!-- Link left_foot___side_default -->
+  <link name="left_foot___side_default">
+    <inertial>
+      <origin xyz="0.00454445 -0.0365542 0.0466461" rpy="0 0 0"/>
+      <mass value="0.281856"/>
+      <inertia ixx="0.000718224" ixy="2.50911e-06" ixz="-4.6415e-06" iyy="0.000922445" iyz="-1.43537e-05" izz="0.000265313"/>
+    </inertial>
+    <!-- Part m2_5x10__configuration__10_21 -->
+    <!-- Part m2_5x10__configuration__10_22 -->
+    <!-- Part m2_5x10__configuration__10_23 -->
+    <!-- Part m2_5x10__configuration__10_24 -->
+    <!-- Part m3x8__configuration__8 -->
+    <!-- Part entretoise_m_f_8xm3__length__7 -->
+    <!-- Part m3x8__configuration__8_2 -->
+    <!-- Part m3x5__configuration__5 -->
+    <!-- Part ecrou_4_3 -->
+    <!-- Part m4x10__length__10 -->
+    <!-- Part m4x10__length__10_2 -->
+    <!-- Part m3x12__configuration__16 -->
+    <!-- Part ecrou_3__nylstop_false_5 -->
+    <!-- Part mounting_block -->
+    <!-- Part ecrou_4_4 -->
+    <!-- Part m3x5__configuration_default -->
+    <!-- Part ecrou_4_5 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_2 -->
+    <!-- Part m4x10__length__10_3 -->
+    <!-- Part m3x5__configuration_default_2 -->
+    <!-- Part m4x10__length__10_4 -->
+    <!-- Part m3x5__configuration_default_3 -->
+    <!-- Part m3x8__configuration__8_3 -->
+    <!-- Part gauge_foot_protection -->
+    <!-- Part foottip -->
+    <!-- Part mounting_block_2 -->
+    <!-- Part foot_plate -->
+    <visual>
+      <origin xyz="0.0055 -0.043 0.03867" rpy="1.5708 7.91032e-13 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/foot_plate.stl"/>
+      </geometry>
+      <material name="foot_plate_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__8_4 -->
+    <!-- Part mounting_block_3 -->
+    <!-- Part m4x10__length__10_5 -->
+    <!-- Part m3x5__configuration__5_2 -->
+    <!-- Part ecrou_4_6 -->
+    <!-- Part ecrou_4_7 -->
+    <!-- Part m3x5__configuration__5_3 -->
+    <!-- Part m4x10__length__10_6 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_3 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_4 -->
+    <!-- Part m3x12__configuration__16_2 -->
+    <!-- Part m3x12__configuration__16_3 -->
+    <!-- Part ecrou_3__nylstop_false_6 -->
+    <!-- Part ecrou_4_8 -->
+    <!-- Part ecrou_4_9 -->
+    <!-- Part ecrou_4_10 -->
+    <!-- Part ecrou_3__nylstop_false_7 -->
+    <!-- Part m3x5__configuration__5_4 -->
+    <!-- Part m4x10__length__10_7 -->
+    <!-- Part mounting_block_4 -->
+    <!-- Part m3x5__configuration_default_4 -->
+    <!-- Part m4x10__length__10_8 -->
+    <!-- Part u_base_motors_blocs -->
+    <visual>
+      <origin xyz="0.015 -0.04 0.05434" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_motors_blocs.stl"/>
+      </geometry>
+      <material name="u_base_motors_blocs_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_82 -->
+    <!-- Part ecrou_2_5_83 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_167 -->
+    <!-- Part m2_5x4__configuration_default_35 -->
+    <!-- Part u_side_small -->
+    <visual>
+      <origin xyz="0.015 -0.04 0.05634" rpy="-3.14159 1.76883e-13 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small.stl"/>
+      </geometry>
+      <material name="u_side_small_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_91 -->
+    <!-- Part ecrou_2_5_84 -->
+    <!-- Part ecrou_2_5_85 -->
+    <!-- Part u_side_small_with_trace -->
+    <visual>
+      <origin xyz="-0.015 -0.04 0" rpy="-1.32319e-29 -1.73345e-30 3.18958e-31"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small_with_trace.stl"/>
+      </geometry>
+      <material name="u_side_small_with_trace_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg -->
+    <!-- Part nylon_ring -->
+    <!-- Part cleat -->
+    <visual>
+      <origin xyz="0.0435 -0.0615 0.10947" rpy="-3.14159 1.50223e-13 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_2 -->
+    <!-- Part nylon_ring_2 -->
+    <!-- Part cleat_2 -->
+    <visual>
+      <origin xyz="-0.0325 -0.0615 0.10947" rpy="-3.14159 1.50223e-13 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_2_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_3 -->
+    <!-- Part nylon_ring_3 -->
+    <!-- Part cleat_3 -->
+    <visual>
+      <origin xyz="0.0435 -0.0615 -0.03213" rpy="-6.82787e-15 -2.91072e-14 -3.6996e-14"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_3_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_4 -->
+    <!-- Part nylon_ring_4 -->
+    <!-- Part cleat_4 -->
+    <visual>
+      <origin xyz="-0.0325 -0.0615 -0.03213" rpy="-6.82787e-15 -2.91072e-14 -3.6996e-14"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_4_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_92 -->
+    <!-- Part m2_5x5__configuration_size_93 -->
+    <!-- Part m2_5x5__configuration_size_94 -->
+    <!-- Part m2_5x5__configuration_size_95 -->
+    <!-- Part m2_5x5__configuration_size_96 -->
+    <!-- Part m2_5x4__configuration_default_36 -->
+    <!-- Part m2_5x4__configuration_default_37 -->
+    <!-- Part m2_5x4__configuration_default_38 -->
+    <!-- Part m2_5x4__configuration_default_39 -->
+    <!-- Part m2_5x4__configuration_default_40 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_168 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_169 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_170 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_171 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_172 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_173 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_174 -->
+  </link>
+  <!-- Frame left_foot (dummy link + fixed joint) -->
+  <link name="left_foot">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="left_foot_frame" type="fixed">
+    <origin xyz="0.003 -0.0615 0.03617" rpy="-1.5708 -1.5708 0"/>
+    <parent link="left_foot___side_default"/>
+    <child link="left_foot"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame left_ps_0 (dummy link + fixed joint) -->
+  <link name="left_ps_0">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="left_ps_0_frame" type="fixed">
+    <origin xyz="-0.0325 -0.0615 0.10947" rpy="-1.5708 -1.5708 0"/>
+    <parent link="left_foot___side_default"/>
+    <child link="left_ps_0"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame left_ps_1 (dummy link + fixed joint) -->
+  <link name="left_ps_1">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="left_ps_1_frame" type="fixed">
+    <origin xyz="-0.0325 -0.0615 -0.03213" rpy="-1.5708 -1.5708 0"/>
+    <parent link="left_foot___side_default"/>
+    <child link="left_ps_1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame left_ps_2 (dummy link + fixed joint) -->
+  <link name="left_ps_2">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="left_ps_2_frame" type="fixed">
+    <origin xyz="0.0435 -0.0615 -0.03213" rpy="-1.5708 -1.5708 0"/>
+    <parent link="left_foot___side_default"/>
+    <child link="left_ps_2"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame left_ps_3 (dummy link + fixed joint) -->
+  <link name="left_ps_3">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="left_ps_3_frame" type="fixed">
+    <origin xyz="0.0435 -0.0615 0.10947" rpy="-1.5708 -1.5708 0"/>
+    <parent link="left_foot___side_default"/>
+    <child link="left_ps_3"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from mx106_covered_block_mir_ankle__configuration_default to left_foot___side_default -->
+  <joint name="left_ankle_roll" type="revolute">
+    <origin xyz="0.0234 -7.82707e-15 -0.0285" rpy="1.51856e-29 -1.5708 0"/>
+    <parent link="mx106_covered_block_mir_ankle__configuration_default"/>
+    <child link="left_foot___side_default"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.785398" upper="0.785398"/>
+  </joint>
+  <!-- Joint from tibia_2023 to mx106_covered_block_mir_ankle__configuration_default -->
+  <joint name="left_ankle_pitch" type="revolute">
+    <origin xyz="1.34441e-17 0.14 -1.38778e-17" rpy="9.50133e-15 4.07687e-14 3.14159"/>
+    <parent link="tibia_2023"/>
+    <child link="mx106_covered_block_mir_ankle__configuration_default"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.309" upper="1.309"/>
+  </joint>
+  <!-- Joint from left_knee_2023 to tibia_2023 -->
+  <joint name="left_knee" type="revolute">
+    <origin xyz="-3.87277e-15 0.14 -0.001" rpy="6.25589e-15 4.16219e-14 1.04416e-13"/>
+    <parent link="left_knee_2023"/>
+    <child link="tibia_2023"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0" upper="2.26893"/>
+  </joint>
+  <!-- Joint from mx106_block_hip__configuration_hip to left_knee_2023 -->
+  <joint name="left_hip_pitch" type="revolute">
+    <origin xyz="0.0295 2.51882e-15 0.0234" rpy="-3.14159 -1.5708 0"/>
+    <parent link="mx106_block_hip__configuration_hip"/>
+    <child link="left_knee_2023"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="0.698132"/>
+  </joint>
+  <!-- Joint from u_block_2023 to mx106_block_hip__configuration_hip -->
+  <joint name="left_hip_roll" type="revolute">
+    <origin xyz="0.0234 1.38778e-17 -0.04" rpy="1.5708 -4.80396e-14 -1.5708"/>
+    <parent link="u_block_2023"/>
+    <child link="mx106_block_hip__configuration_hip"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.523599" upper="0.610865"/>
+  </joint>
+  <!-- Joint from torso_2023 to u_block_2023 -->
+  <joint name="left_hip_yaw" type="revolute">
+    <origin xyz="0.0033892 0.0464001 -0.021" rpy="4.80069e-14 1.52629e-14 -3.14159"/>
+    <parent link="torso_2023"/>
+    <child link="u_block_2023"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.0472" upper="1.0472"/>
+  </joint>
+  <!-- Link u_block_2023_2 -->
+  <link name="u_block_2023_2">
+    <inertial>
+      <origin xyz="-0.00509532 -8.44195e-07 -0.00985131" rpy="0 0 0"/>
+      <mass value="0.0630136"/>
+      <inertia ixx="2.02694e-05" ixy="1.52007e-09" ixz="-2.02393e-06" iyy="4.24266e-05" iyz="-2.00442e-09" izz="3.52575e-05"/>
+    </inertial>
+    <!-- Part u_side_small_2023_2 -->
+    <visual>
+      <origin xyz="-0.03294 0.01875 -3.46945e-18" rpy="-1.5708 -6.31089e-30 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small_2023.stl"/>
+      </geometry>
+      <material name="u_side_small_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x4__configuration_default_41 -->
+    <!-- Part m2_5x5__configuration_size_97 -->
+    <!-- Part m2_5x4__configuration_default_42 -->
+    <!-- Part m2_5x25__configuration__25_9 -->
+    <!-- Part m2_5x4__configuration_default_43 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_175 -->
+    <!-- Part m2_5x25__configuration__25_10 -->
+    <!-- Part u_base_motors_blocs_2023_2 -->
+    <visual>
+      <origin xyz="-0.03094 0.01875 0" rpy="3.14159 -0 6.47682e-30"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_motors_blocs_2023.stl"/>
+      </geometry>
+      <material name="u_base_motors_blocs_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_176 -->
+    <!-- Part m2_5x4__configuration_default_44 -->
+    <!-- Part m2_5x25__configuration__25_11 -->
+    <!-- Part m2_5x25__configuration__25_12 -->
+    <!-- Part m2_5x25__configuration__25_13 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_177 -->
+    <!-- Part m2_5x5__configuration_size_98 -->
+    <!-- Part m2_5x4__configuration_default_45 -->
+    <!-- Part m2_5x25__configuration__25_14 -->
+    <!-- Part m2_5x4__configuration_default_46 -->
+    <!-- Part m2_5x5__configuration_size_99 -->
+    <!-- Part m2_5x5__configuration_size_100 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_178 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_179 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_180 -->
+    <!-- Part m2_5x5__configuration_size_101 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_181 -->
+    <!-- Part m2_5x25__configuration__25_15 -->
+    <!-- Part m2_5x5__configuration_size_102 -->
+    <!-- Part u_side_small_with_trace_2023_2 -->
+    <visual>
+      <origin xyz="0.0234 -0.01875 -5.89806e-17" rpy="-1.5708 -1.4433e-15 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small_with_trace_2023.stl"/>
+      </geometry>
+      <material name="u_side_small_with_trace_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_182 -->
+    <!-- Part m2_5x25__configuration__25_16 -->
+  </link>
+  <!-- Link mx106_block_mir_hip__configuration_hip -->
+  <link name="mx106_block_mir_hip__configuration_hip">
+    <inertial>
+      <origin xyz="-0.000111954 -0.0150181 0.00431133" rpy="0 0 0"/>
+      <mass value="0.4071"/>
+      <inertia ixx="0.0004357" ixy="1.81997e-06" ixz="8.94591e-07" iyy="0.000381734" iyz="-3.4087e-05" izz="0.000191264"/>
+    </inertial>
+    <!-- Part m2_5x4__configuration_default_47 -->
+    <!-- Part m2_5x6__configuration__6_45 -->
+    <!-- Part m2_5x10__configuration__10_25 -->
+    <!-- Part hn05_i101_11 -->
+    <visual>
+      <origin xyz="-1.22471e-14 -4.34375e-15 0.04962" rpy="-7.13318e-14 -2.96096e-13 1.56972e-13"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_11_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_11 -->
+    <!-- Part m2_5x4__configuration_default_48 -->
+    <!-- Part m3x6__configuration__8_11 -->
+    <!-- Part m2_5x4__configuration_default_49 -->
+    <!-- Part m2_5x10__configuration__10_26 -->
+    <!-- Part m2_5x10__configuration__10_27 -->
+    <!-- Part m2_5x4__configuration_default_50 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_183 -->
+    <!-- Part ecrou_2_5_86 -->
+    <!-- Part fr05_s101_10 -->
+    <visual>
+      <origin xyz="-1.18586e-14 -4.1564e-15 0.0474" rpy="-1.5708 -3.82472e-14 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_10_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part fr05_s101_11 -->
+    <visual>
+      <origin xyz="8.08381e-15 -0.036 -0.0006" rpy="1.5708 2.16493e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_11_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_87 -->
+    <!-- Part fr08_b101_3 -->
+    <!-- Part ecrou_2_5_88 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_184 -->
+    <!-- Part m2_5x6__configuration__6_46 -->
+    <!-- Part m2_5x4__configuration_default_51 -->
+    <!-- Part m2_5x4__configuration_default_52 -->
+    <!-- Part m2_5x6__configuration__6_47 -->
+    <!-- Part m2_5x4__configuration_default_53 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_185 -->
+    <!-- Part fr05_f101_3 -->
+    <visual>
+      <origin xyz="-1.18586e-14 -4.1564e-15 0.0474" rpy="1.0103e-14 4.44089e-16 4.44089e-16"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_f101.stl"/>
+      </geometry>
+      <material name="fr05_f101_3_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x6__configuration__6_48 -->
+    <!-- Part m2_5x4__configuration_default_54 -->
+    <!-- Part rx64_cap_11 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_186 -->
+    <!-- Part ecrou_2_5_89 -->
+    <!-- Part m2_5x10__configuration__10_28 -->
+    <!-- Part m3x6__configuration__8_12 -->
+    <!-- Part hn05_i101_12 -->
+    <visual>
+      <origin xyz="0.02214 8.25728e-16 0.0234" rpy="-3.14159 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_12_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rx64_cap_12 -->
+    <!-- Part mf128zz_12 -->
+    <!-- Part mx106_6 -->
+    <visual>
+      <origin xyz="-7.99361e-15 -3.07393e-15 0.0234" rpy="3.20799e-13 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_6_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_16 -->
+    <visual>
+      <origin xyz="-3.78864e-15 -1.54043e-15 -0.0025" rpy="1.5708 -7.01875e-14 -0.392699"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_16_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mx106_7 -->
+    <visual>
+      <origin xyz="0 0 -0.026" rpy="-4.91714e-32 5.33681e-30 5.45086e-33"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_7_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_29 -->
+    <!-- Part washer_ba1226_5 -->
+    <!-- Part washer_ba1226_6 -->
+    <!-- Part hn05_n102_17 -->
+    <visual>
+      <origin xyz="-0.027 -7.78544e-15 0.0234" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_17_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part core_ba1226_4 -->
+    <!-- Part m3x10__configuration__14_25 -->
+  </link>
+  <!-- Link right_knee_2023 -->
+  <link name="right_knee_2023">
+    <inertial>
+      <origin xyz="-2.9715e-05 -0.1015 0.0290188" rpy="0 0 0"/>
+      <mass value="0.275516"/>
+      <inertia ixx="0.000556635" ixy="1.38125e-07" ixz="-8.79221e-10" iyy="0.000127513" iyz="7.95953e-06" izz="0.000475295"/>
+    </inertial>
+    <!-- Part m2_5x6__configuration__6_49 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_187 -->
+    <!-- Part ecrou_2_5_90 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_188 -->
+    <!-- Part m2_5x6__configuration__6_50 -->
+    <!-- Part ecrou_2_5_91 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_189 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_190 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_191 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_192 -->
+    <!-- Part ecrou_2_5_92 -->
+    <!-- Part femur_marker_2 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_193 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_194 -->
+    <!-- Part ecrou_2_5_93 -->
+    <!-- Part ecrou_2_5_94 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_195 -->
+    <!-- Part fr05_s101_12 -->
+    <visual>
+      <origin xyz="-3.35712e-15 -0.0855 0.0295" rpy="-3.14159 -2.37761e-14 -3.9857e-14"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_12_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_196 -->
+    <!-- Part ecrou_2_5_95 -->
+    <!-- Part ecrou_2_5_96 -->
+    <!-- Part ecrou_2_5_97 -->
+    <!-- Part ecrou_2_5_98 -->
+    <!-- Part ecrou_2_5_99 -->
+    <!-- Part m3x6__configuration__8_13 -->
+    <!-- Part hn05_i101_13 -->
+    <visual>
+      <origin xyz="-2.68019e-14 -0.14 0.05164" rpy="1.09635e-13 -4.72539e-14 -2.76723e-13"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_13_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rx64_cap_13 -->
+    <!-- Part mf128zz_13 -->
+    <!-- Part mx106_8 -->
+    <visual>
+      <origin xyz="-2.53617e-14 -0.14 0.0295" rpy="-3.14159 -4.66398e-14 -2.76834e-13"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_8_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_103 -->
+    <!-- Part parallel_pin_2_x_5__8a96b601dde6ec1f6b30033940938144_3 -->
+    <!-- Part u_base_106_2023_2 -->
+    <visual>
+      <origin xyz="-3.35712e-15 -0.0855 0.0295" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_106_2023.stl"/>
+      </geometry>
+      <material name="u_base_106_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part u_side_femur_mir_2023_2 -->
+    <visual>
+      <origin xyz="1.38778e-17 -0.0855 -0.003" rpy="6.15757e-14 -6.25715e-14 -2.01977e-13"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_femur_mir_2023.stl"/>
+      </geometry>
+      <material name="u_side_femur_mir_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part parallel_pin_2_x_5__8a96b601dde6ec1f6b30033940938144_4 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_197 -->
+    <!-- Part u_side_femur_2023_2 -->
+    <visual>
+      <origin xyz="0 -0.0855 -0.003" rpy="-4.85674e-30 -2.03817e-30 -1.27228e-31"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_femur_2023.stl"/>
+      </geometry>
+      <material name="u_side_femur_2023_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_18 -->
+    <visual>
+      <origin xyz="-2.26629e-14 -0.14 0.0035" rpy="-1.5708 1.27176e-13 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_18_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_26 -->
+    <!-- Part washer_ba1226_7 -->
+    <!-- Part core_ba1226_5 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_198 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_199 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_200 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_201 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_202 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_203 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_204 -->
+    <!-- Part m2_5x5__configuration_size_104 -->
+    <!-- Part m2_5x5__configuration_size_105 -->
+    <!-- Part m2_5x5__configuration_size_106 -->
+    <!-- Part m2_5x5__configuration_size_107 -->
+    <!-- Part m2_5x5__configuration_size_108 -->
+    <!-- Part m2_5x5__configuration_size_109 -->
+    <!-- Part m2_5x5__configuration_size_110 -->
+    <!-- Part m2_5x5__configuration_size_111 -->
+    <!-- Part m2_5x5__configuration_size_112 -->
+    <!-- Part m2_5x5__configuration_size_113 -->
+    <!-- Part m2_5x5__configuration_size_114 -->
+  </link>
+  <!-- Link tibia_2023_2 -->
+  <link name="tibia_2023_2">
+    <inertial>
+      <origin xyz="-0.00296199 0.0631406 0.0268398" rpy="0 0 0"/>
+      <mass value="0.113077"/>
+      <inertia ixx="0.000351809" ixy="-6.49234e-06" ixz="-2.0383e-08" iyy="0.000103918" iyz="6.21189e-08" izz="0.00027164"/>
+    </inertial>
+    <!-- Part tibia_marker_2 -->
+    <visual>
+      <origin xyz="-0.000301911 -0.000310677 -0.004" rpy="-3.14159 1.15186e-15 -1.66533e-16"/>
+      <geometry>
+        <mesh filename="package://assets/tibia_marker.stl"/>
+      </geometry>
+      <material name="tibia_marker_2_material">
+        <color rgba="1 0.392157 0.392157 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_115 -->
+    <!-- Part m2_5x5__configuration_size_116 -->
+    <!-- Part m2_5x5__configuration_size_117 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_205 -->
+    <!-- Part ecrou_2_5_100 -->
+    <!-- Part m2_5x5__configuration_size_118 -->
+    <!-- Part renfort_tibia__configuration_simple_bearing_2 -->
+    <visual>
+      <origin xyz="-0.00523756 0.038 0.02722" rpy="1.78635e-13 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/renfort_tibia__configuration_simple_bearing.stl"/>
+      </geometry>
+      <material name="renfort_tibia__configuration_simple_bearing_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_119 -->
+    <!-- Part m2_5x5__configuration_size_120 -->
+    <!-- Part m2_5x5__configuration_size_121 -->
+    <!-- Part m2_5x5__configuration_size_122 -->
+    <!-- Part m2_5x5__configuration_size_123 -->
+    <!-- Part m2_5x5__configuration_size_124 -->
+    <!-- Part ecrou_2_5_101 -->
+    <!-- Part m2_5x5__configuration_size_125 -->
+    <!-- Part m2_5x5__configuration_size_126 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_206 -->
+    <!-- Part tibia_plate_2023_3 -->
+    <visual>
+      <origin xyz="0 2.77556e-17 0" rpy="3.14159 -4.32039e-30 1.0579e-29"/>
+      <geometry>
+        <mesh filename="package://assets/tibia_plate_2023.stl"/>
+      </geometry>
+      <material name="tibia_plate_2023_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part tibia_plate_2023_4 -->
+    <visual>
+      <origin xyz="2.81372e-14 4.44089e-15 0.05744" rpy="3.14159 3.14054e-14 2.10942e-15"/>
+      <geometry>
+        <mesh filename="package://assets/tibia_plate_2023.stl"/>
+      </geometry>
+      <material name="tibia_plate_2023_4_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_127 -->
+    <!-- Part m2_5x5__configuration_size_128 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_207 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_208 -->
+    <!-- Part ecrou_2_5_102 -->
+    <!-- Part m2_5x5__configuration_size_129 -->
+    <!-- Part m2_5x5__configuration_size_130 -->
+    <!-- Part m2_5x5__configuration_size_131 -->
+    <!-- Part m2_5x5__configuration_size_132 -->
+    <!-- Part m2_5x5__configuration_size_133 -->
+    <!-- Part m2_5x5__configuration_size_134 -->
+    <!-- Part m2_5x5__configuration_size_135 -->
+    <!-- Part m2_5x5__configuration_size_136 -->
+    <!-- Part m2_5x5__configuration_size_137 -->
+    <!-- Part m2_5x5__configuration_size_138 -->
+    <!-- Part m2_5x5__configuration_size_139 -->
+    <!-- Part m2_5x5__configuration_size_140 -->
+    <!-- Part m2_5x5__configuration_size_141 -->
+    <!-- Part m2_5x5__configuration_size_142 -->
+    <!-- Part m2_5x5__configuration_size_143 -->
+    <!-- Part m2_5x5__configuration_size_144 -->
+    <!-- Part ecrou_2_5_103 -->
+    <!-- Part m2_5x5__configuration_size_145 -->
+    <!-- Part m2_5x5__configuration_size_146 -->
+  </link>
+  <!-- Link mx106_covered_block_ankle__configuration_default -->
+  <link name="mx106_covered_block_ankle__configuration_default">
+    <inertial>
+      <origin xyz="-0.0194991 -0.0165818 0.0285961" rpy="0 0 0"/>
+      <mass value="0.421345"/>
+      <inertia ixx="0.000211526" ixy="-3.7437e-05" ixz="-8.13738e-07" iyy="0.000399196" iyz="4.59138e-07" izz="0.000472432"/>
+    </inertial>
+    <!-- Part m2_5x4__configuration_default_55 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_209 -->
+    <!-- Part m2_5x10__configuration__10_29 -->
+    <!-- Part hn05_i101_14 -->
+    <visual>
+      <origin xyz="0.02622 2.38698e-15 0.0285" rpy="-3.28237e-13 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_14_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mf128zz_14 -->
+    <!-- Part m2_5x4__configuration_default_56 -->
+    <!-- Part m3x6__configuration__8_14 -->
+    <!-- Part m2_5x4__configuration_default_57 -->
+    <!-- Part m2_5x10__configuration__10_30 -->
+    <!-- Part m2_5x10__configuration__10_31 -->
+    <!-- Part m2_5x4__configuration_default_58 -->
+    <!-- Part ankle_cover_2 -->
+    <!-- Part m2_5x6__configuration__6_51 -->
+    <!-- Part ecrou_2_5_104 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_210 -->
+    <!-- Part fr05_s101_13 -->
+    <visual>
+      <origin xyz="0.024 1.77636e-15 0.0285" rpy="2.18423e-13 2.19685e-13 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_13_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_211 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_212 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_213 -->
+    <!-- Part fr05_s101_14 -->
+    <visual>
+      <origin xyz="-0.024 -0.036 0.0285" rpy="4.73718e-14 -1.40929e-13 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_s101.stl"/>
+      </geometry>
+      <material name="fr05_s101_14_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_105 -->
+    <!-- Part fr08_b101_4 -->
+    <!-- Part ecrou_2_5_106 -->
+    <!-- Part ecrou_2_5_107 -->
+    <!-- Part m2_5x6__configuration__6_52 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_214 -->
+    <!-- Part m2_5x4__configuration_default_59 -->
+    <!-- Part ecrou_2_5_108 -->
+    <!-- Part m2_5x4__configuration_default_60 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_215 -->
+    <!-- Part m2_5x4__configuration_default_61 -->
+    <!-- Part m2_5x6__configuration__6_53 -->
+    <!-- Part fr05_f101_4 -->
+    <visual>
+      <origin xyz="0.024 1.88738e-15 0.0285" rpy="-3.75477e-13 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/fr05_f101.stl"/>
+      </geometry>
+      <material name="fr05_f101_4_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x8__configuration_copy_of_6_216 -->
+    <!-- Part m2_5x4__configuration_default_62 -->
+    <!-- Part rx64_cap_14 -->
+    <!-- Part m2_5x6__configuration__6_54 -->
+    <!-- Part ecrou_2_5_109 -->
+    <!-- Part m2_5x10__configuration__10_32 -->
+    <!-- Part m3x6__configuration__8_15 -->
+    <!-- Part hn05_i101_15 -->
+    <visual>
+      <origin xyz="-2.37223e-16 1.11022e-15 0.05064" rpy="2.08999e-14 -2.09416e-14 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_i101.stl"/>
+      </geometry>
+      <material name="hn05_i101_15_material">
+        <color rgba="0.8 0.776471 0.713725 1.0"/>
+      </material>
+    </visual>
+    <!-- Part rx64_cap_15 -->
+    <!-- Part mf128zz_15 -->
+    <!-- Part mx106_9 -->
+    <visual>
+      <origin xyz="-6.72205e-17 5.55112e-16 0.0285" rpy="-3.14159 -2.08861e-14 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_9_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part hn05_n102_19 -->
+    <visual>
+      <origin xyz="-0.0259 -4.996e-16 0.0285" rpy="3.14159 1.1781 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_19_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part mx106_10 -->
+    <visual>
+      <origin xyz="-0.0494 -2.33147e-15 0.0285" rpy="-3.7631e-13 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/mx106.stl"/>
+      </geometry>
+      <material name="mx106_10_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__12_30 -->
+    <!-- Part hn05_n102_20 -->
+    <visual>
+      <origin xyz="4.33681e-19 -5.55112e-17 0.0025" rpy="-1.5708 1.51184e-30 4.73317e-30"/>
+      <geometry>
+        <mesh filename="package://assets/hn05_n102.stl"/>
+      </geometry>
+      <material name="hn05_n102_20_material">
+        <color rgba="0.278431 0.278431 0.278431 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x10__configuration__14_27 -->
+    <!-- Part washer_ba1226_8 -->
+    <!-- Part core_ba1226_6 -->
+  </link>
+  <!-- Link right_foot_2 -->
+  <link name="right_foot_2">
+    <inertial>
+      <origin xyz="-0.00454439 -0.0365542 0.0466461" rpy="0 0 0"/>
+      <mass value="0.281856"/>
+      <inertia ixx="0.000718224" ixy="-2.50933e-06" ixz="4.64174e-06" iyy="0.000922445" iyz="-1.43537e-05" izz="0.000265313"/>
+    </inertial>
+    <!-- Part m2_5x10__configuration__10_33 -->
+    <!-- Part m2_5x10__configuration__10_34 -->
+    <!-- Part m2_5x10__configuration__10_35 -->
+    <!-- Part m2_5x10__configuration__10_36 -->
+    <!-- Part m3x8__configuration__8_5 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_5 -->
+    <!-- Part m3x8__configuration__8_6 -->
+    <!-- Part m3x5__configuration__5_5 -->
+    <!-- Part ecrou_4_11 -->
+    <!-- Part m4x10__length__10_9 -->
+    <!-- Part m4x10__length__10_10 -->
+    <!-- Part m3x12__configuration__16_4 -->
+    <!-- Part ecrou_3__nylstop_false_8 -->
+    <!-- Part mounting_block_5 -->
+    <!-- Part ecrou_4_12 -->
+    <!-- Part m3x5__configuration_default_5 -->
+    <!-- Part ecrou_4_13 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_6 -->
+    <!-- Part m4x10__length__10_11 -->
+    <!-- Part m3x5__configuration_default_6 -->
+    <!-- Part m4x10__length__10_12 -->
+    <!-- Part m3x5__configuration_default_7 -->
+    <!-- Part m3x8__configuration__8_7 -->
+    <!-- Part gauge_foot_protection_2 -->
+    <!-- Part foottip_2 -->
+    <!-- Part mounting_block_6 -->
+    <!-- Part foot_plate_2 -->
+    <visual>
+      <origin xyz="-0.0055 -0.043 0.03867" rpy="1.5708 -3.89928e-13 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/foot_plate.stl"/>
+      </geometry>
+      <material name="foot_plate_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m3x8__configuration__8_8 -->
+    <!-- Part mounting_block_7 -->
+    <!-- Part m4x10__length__10_13 -->
+    <!-- Part m3x5__configuration__5_6 -->
+    <!-- Part ecrou_4_14 -->
+    <!-- Part ecrou_4_15 -->
+    <!-- Part m3x5__configuration__5_7 -->
+    <!-- Part m4x10__length__10_14 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_7 -->
+    <!-- Part entretoise_m_f_8xm3__length__7_8 -->
+    <!-- Part m3x12__configuration__16_5 -->
+    <!-- Part m3x12__configuration__16_6 -->
+    <!-- Part ecrou_3__nylstop_false_9 -->
+    <!-- Part ecrou_4_16 -->
+    <!-- Part ecrou_4_17 -->
+    <!-- Part ecrou_4_18 -->
+    <!-- Part ecrou_3__nylstop_false_10 -->
+    <!-- Part m3x5__configuration__5_8 -->
+    <!-- Part m4x10__length__10_15 -->
+    <!-- Part mounting_block_8 -->
+    <!-- Part m3x5__configuration_default_8 -->
+    <!-- Part m4x10__length__10_16 -->
+    <!-- Part u_base_motors_blocs_2 -->
+    <visual>
+      <origin xyz="0.015 -0.04 0.05434" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/u_base_motors_blocs.stl"/>
+      </geometry>
+      <material name="u_base_motors_blocs_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part ecrou_2_5_110 -->
+    <!-- Part ecrou_2_5_111 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_217 -->
+    <!-- Part m2_5x4__configuration_default_63 -->
+    <!-- Part u_side_small_2 -->
+    <visual>
+      <origin xyz="0.015 -0.04 0.05634" rpy="-3.14159 -3.91763e-13 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small.stl"/>
+      </geometry>
+      <material name="u_side_small_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_147 -->
+    <!-- Part ecrou_2_5_112 -->
+    <!-- Part ecrou_2_5_113 -->
+    <!-- Part u_side_small_with_trace_2 -->
+    <visual>
+      <origin xyz="-0.015 -0.04 -3.46945e-18" rpy="-5.67389e-30 4.01277e-30 2.83913e-29"/>
+      <geometry>
+        <mesh filename="package://assets/u_side_small_with_trace.stl"/>
+      </geometry>
+      <material name="u_side_small_with_trace_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_5 -->
+    <!-- Part nylon_ring_5 -->
+    <!-- Part cleat_5 -->
+    <visual>
+      <origin xyz="0.0325 -0.0615 0.10947" rpy="3.14159 -2.12119e-13 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_5_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_6 -->
+    <!-- Part nylon_ring_6 -->
+    <!-- Part cleat_6 -->
+    <visual>
+      <origin xyz="-0.0435 -0.0615 0.10947" rpy="3.14159 -2.12119e-13 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_6_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_7 -->
+    <!-- Part nylon_ring_7 -->
+    <!-- Part cleat_7 -->
+    <visual>
+      <origin xyz="0.0325 -0.0615 -0.03213" rpy="5.9619e-14 -8.45157e-15 -8.47239e-15"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_7_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part load_cell_40kg_8 -->
+    <!-- Part nylon_ring_8 -->
+    <!-- Part cleat_8 -->
+    <visual>
+      <origin xyz="-0.0435 -0.0615 -0.03213" rpy="5.9619e-14 -8.45157e-15 -8.47239e-15"/>
+      <geometry>
+        <mesh filename="package://assets/cleat.stl"/>
+      </geometry>
+      <material name="cleat_8_material">
+        <color rgba="0.301961 0.290196 0.262745 1.0"/>
+      </material>
+    </visual>
+    <!-- Part m2_5x5__configuration_size_148 -->
+    <!-- Part m2_5x5__configuration_size_149 -->
+    <!-- Part m2_5x5__configuration_size_150 -->
+    <!-- Part m2_5x5__configuration_size_151 -->
+    <!-- Part m2_5x5__configuration_size_152 -->
+    <!-- Part m2_5x4__configuration_default_64 -->
+    <!-- Part m2_5x4__configuration_default_65 -->
+    <!-- Part m2_5x4__configuration_default_66 -->
+    <!-- Part m2_5x4__configuration_default_67 -->
+    <!-- Part m2_5x4__configuration_default_68 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_218 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_219 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_220 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_221 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_222 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_223 -->
+    <!-- Part m2_5x8__configuration_copy_of_6_224 -->
+  </link>
+  <!-- Frame right_foot (dummy link + fixed joint) -->
+  <link name="right_foot">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="right_foot_frame" type="fixed">
+    <origin xyz="-0.003 -0.0615 0.03617" rpy="-1.5708 -1.5708 0"/>
+    <parent link="right_foot_2"/>
+    <child link="right_foot"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame right_ps_0 (dummy link + fixed joint) -->
+  <link name="right_ps_0">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="right_ps_0_frame" type="fixed">
+    <origin xyz="-0.0435 -0.0615 0.10947" rpy="-1.5708 -1.5708 0"/>
+    <parent link="right_foot_2"/>
+    <child link="right_ps_0"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame right_ps_1 (dummy link + fixed joint) -->
+  <link name="right_ps_1">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="right_ps_1_frame" type="fixed">
+    <origin xyz="-0.0435 -0.0615 -0.03213" rpy="-1.5708 -1.5708 0"/>
+    <parent link="right_foot_2"/>
+    <child link="right_ps_1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame right_ps_2 (dummy link + fixed joint) -->
+  <link name="right_ps_2">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="right_ps_2_frame" type="fixed">
+    <origin xyz="0.0325 -0.0615 -0.03213" rpy="-1.5708 -1.5708 0"/>
+    <parent link="right_foot_2"/>
+    <child link="right_ps_2"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame right_ps_3 (dummy link + fixed joint) -->
+  <link name="right_ps_3">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="right_ps_3_frame" type="fixed">
+    <origin xyz="0.0325 -0.0615 0.10947" rpy="-1.5708 -1.5708 0"/>
+    <parent link="right_foot_2"/>
+    <child link="right_ps_3"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from mx106_covered_block_ankle__configuration_default to right_foot_2 -->
+  <joint name="right_ankle_roll" type="revolute">
+    <origin xyz="-0.0234 7.43849e-15 0.0285" rpy="-3.14159 -1.5708 0"/>
+    <parent link="mx106_covered_block_ankle__configuration_default"/>
+    <child link="right_foot_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.785398" upper="0.785398"/>
+  </joint>
+  <!-- Joint from tibia_2023_2 to mx106_covered_block_ankle__configuration_default -->
+  <joint name="right_ankle_pitch" type="revolute">
+    <origin xyz="1.38778e-17 0.14 0" rpy="4.54439e-15 9.85748e-15 8.73436e-17"/>
+    <parent link="tibia_2023_2"/>
+    <child link="mx106_covered_block_ankle__configuration_default"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.309" upper="1.309"/>
+  </joint>
+  <!-- Joint from right_knee_2023 to tibia_2023_2 -->
+  <joint name="right_knee" type="revolute">
+    <origin xyz="-2.23445e-14 -0.14 0.001" rpy="2.34535e-15 4.60743e-15 3.14159"/>
+    <parent link="right_knee_2023"/>
+    <child link="tibia_2023_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="2.26893"/>
+  </joint>
+  <!-- Joint from mx106_block_mir_hip__configuration_hip to right_knee_2023 -->
+  <joint name="right_hip_pitch" type="revolute">
+    <origin xyz="-0.0295 -8.44463e-15 0.0234" rpy="-2.57294e-13 1.5708 0"/>
+    <parent link="mx106_block_mir_hip__configuration_hip"/>
+    <child link="right_knee_2023"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="0.698132"/>
+  </joint>
+  <!-- Joint from u_block_2023_2 to mx106_block_mir_hip__configuration_hip -->
+  <joint name="right_hip_roll" type="revolute">
+    <origin xyz="0.0234 -1.38778e-17 -0.04" rpy="1.5708 -4.42747e-14 -1.5708"/>
+    <parent link="u_block_2023_2"/>
+    <child link="mx106_block_mir_hip__configuration_hip"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.610865" upper="0.523599"/>
+  </joint>
+  <!-- Joint from torso_2023 to u_block_2023_2 -->
+  <joint name="right_hip_yaw" type="revolute">
+    <origin xyz="0.0033892 -0.0463999 -0.021" rpy="4.44134e-14 -4.35426e-15 -3.14159"/>
+    <parent link="torso_2023"/>
+    <child link="u_block_2023_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.0472" upper="1.0472"/>
+  </joint>
+</robot>
